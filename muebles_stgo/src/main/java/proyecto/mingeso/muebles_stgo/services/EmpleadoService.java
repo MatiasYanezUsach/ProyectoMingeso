@@ -16,14 +16,12 @@ public class EmpleadoService {
     public ArrayList<EmpleadoEntity> obtenerEmpleados(){
         return (ArrayList<EmpleadoEntity>) empleadoRepository.findAll();
     }
-
+    public EmpleadoEntity guardarEmpleado(EmpleadoEntity empleado){
+        return empleadoRepository.save(empleado);
+    }
     public EmpleadoEntity crearEmpleado(EmpleadoEntity empleado){
         EmpleadoEntity nuevoEmpleado = empleadoRepository.save(new EmpleadoEntity(empleado.getIdempleado(), empleado.getRut(), empleado.getApellidos(), empleado.getNombres(), empleado.getFechanac(), empleado.getCategoria(), empleado.getFechain()));
         return guardarEmpleado(nuevoEmpleado);
-    }
-
-    public EmpleadoEntity guardarEmpleado(EmpleadoEntity empleado){
-        return empleadoRepository.save(empleado);
     }
 
     public Optional<EmpleadoEntity> obtenerPorId(Long idempleado){

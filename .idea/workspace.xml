@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Avance CRUD empleado">
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="CRUD empleado finalizado sin comprobacion de errores">
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/JustificativoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/JustificativoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/JustificativoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/JustificativoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/EmpleadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/EmpleadoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/EmpleadoEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/EmpleadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/EmpleadoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -111,8 +113,17 @@
       <workItem from="1663197053391" duration="6389000" />
       <workItem from="1663274586665" duration="4543000" />
       <workItem from="1663282685713" duration="7776000" />
-      <workItem from="1663295957173" duration="2199000" />
+      <workItem from="1663295957173" duration="2336000" />
+      <workItem from="1663298697067" duration="2256000" />
     </task>
+    <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
+      <created>1663298292608</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663298292608</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,5 +139,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="CRUD empleado finalizado sin comprobacion de errores" />
+    <option name="LAST_COMMIT_MESSAGE" value="CRUD empleado finalizado sin comprobacion de errores" />
   </component>
 </project>

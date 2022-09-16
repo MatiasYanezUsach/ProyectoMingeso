@@ -27,7 +27,7 @@ public class EmpleadoController {
         Optional<EmpleadoEntity> empleado = empleadoService.obtenerPorId(id);
         return new ResponseEntity(empleado, HttpStatus.OK);
     }
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/empleados/create", method = RequestMethod.POST)
     public ResponseEntity<EmpleadoEntity> crearEmpleado(@RequestBody EmpleadoEntity empleado) {
         EmpleadoEntity nuevoEmpleado = empleadoService.crearEmpleado(empleado);
         return new ResponseEntity<>(nuevoEmpleado, HttpStatus.CREATED);
