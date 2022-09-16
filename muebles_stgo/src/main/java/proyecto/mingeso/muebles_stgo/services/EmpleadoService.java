@@ -17,17 +17,28 @@ public class EmpleadoService {
         return (ArrayList<EmpleadoEntity>) empleadoRepository.findAll();
     }
 
+    public EmpleadoEntity crearEmpleado(EmpleadoEntity empleado){
+        EmpleadoEntity nuevoEmpleado = empleadoRepository.save(new EmpleadoEntity(empleado.getIdempleado(), empleado.getRut(), empleado.getApellidos(), empleado.getNombres(), empleado.getFechanac(), empleado.getCategoria(), empleado.getFechain()));
+        return guardarEmpleado(nuevoEmpleado);
+    }
+
     public EmpleadoEntity guardarEmpleado(EmpleadoEntity empleado){
         return empleadoRepository.save(empleado);
     }
 
-    public Optional<EmpleadoEntity> obtenerPorId(Long id_empleado){
-        return empleadoRepository.findById(id_empleado);
+    public Optional<EmpleadoEntity> obtenerPorId(Long idempleado){
+        return empleadoRepository.findById(idempleado);
     }
 
-    public boolean eliminarEmpleado(Long id_empleado){
+    public EmpleadoEntity modificarEmpleado(Long idempleado, EmpleadoEntity empleado){
+        Optional<EmpleadoEntity> empleadoPrev=obtenerPorId(idempleado);
+        EmpleadoEntity nuevoEmpleado = empleadoRepository.save(new EmpleadoEntity(idempleado, empleado.getRut(), empleado.getApellidos(), empleado.getNombres(), empleado.getFechanac(), empleado.getCategoria(), empleado.getFechain()));
+        return guardarEmpleado(nuevoEmpleado);
+    }
+
+    public boolean eliminarEmpleado(Long idempleado){
         try{
-            empleadoRepository.deleteById(id_empleado);
+            empleadoRepository.deleteById(idempleado);
             return true;
         }
         catch(Exception err){
