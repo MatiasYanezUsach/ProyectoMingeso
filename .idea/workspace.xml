@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="CRUD justificativo finalizado sin comprobacion de errores" />
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="CRUD justificativo finalizado sin comprobacion de errores">
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SolicitudController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/SolicitudEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/SolicitudRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SolicitudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/EmpleadoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/EmpleadoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/JustificativoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/JustificativoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/EmpleadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/EmpleadoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/JustificativoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/JustificativoService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +30,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/EmpleadoEntity.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -107,6 +120,8 @@
       <workItem from="1663282685713" duration="7776000" />
       <workItem from="1663295957173" duration="2336000" />
       <workItem from="1663298697067" duration="2394000" />
+      <workItem from="1663422254619" duration="5190000" />
+      <workItem from="1663427624029" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>

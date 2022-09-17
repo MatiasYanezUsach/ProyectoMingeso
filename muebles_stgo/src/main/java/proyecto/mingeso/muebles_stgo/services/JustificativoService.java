@@ -22,7 +22,7 @@ public class JustificativoService {
     }
 
     public JustificativoEntity crearJustificativo(JustificativoEntity justificativo){
-        JustificativoEntity nuevoJustificativo = justificativoRepository.save(new JustificativoEntity(justificativo.getIdjustificacion(), justificativo.getEmpresaemisora(), justificativo.getFirma(),justificativo.getMotivo(), justificativo.getFechaemision(), justificativo.getFechacubridora()));
+        JustificativoEntity nuevoJustificativo = justificativoRepository.save(new JustificativoEntity(justificativo.getId_justificativo(), justificativo.getEmpresa_emisora(), justificativo.getFirma(),justificativo.getMotivo(), justificativo.getFecha_emision(), justificativo.getFecha_cubridora(),justificativo.getEmpleado()));
         return guardarJustificativo(nuevoJustificativo);
     }
 
@@ -32,7 +32,7 @@ public class JustificativoService {
 
     public JustificativoEntity modificarJustificativo(Long idjustificativo, JustificativoEntity justificativo){
         Optional<JustificativoEntity> justificativoPrev=obtenerPorId(idjustificativo);
-        JustificativoEntity nuevoJustificativo = justificativoRepository.save(new JustificativoEntity(idjustificativo, justificativo.getEmpresaemisora(), justificativo.getFirma(),justificativo.getMotivo(), justificativo.getFechaemision(), justificativo.getFechacubridora()));
+        JustificativoEntity nuevoJustificativo = justificativoRepository.save(new JustificativoEntity(idjustificativo, justificativo.getEmpresa_emisora(), justificativo.getFirma(),justificativo.getMotivo(), justificativo.getFecha_emision(), justificativo.getFecha_cubridora(),justificativo.getEmpleado()));
         return guardarJustificativo(nuevoJustificativo);
     }
 

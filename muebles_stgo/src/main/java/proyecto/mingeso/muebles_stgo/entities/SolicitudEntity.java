@@ -7,23 +7,19 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "justificativos")
+@Table(name = "solicitudes")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class JustificativoEntity {
+public class SolicitudEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_justificativo", nullable = false)
-    private Long id_justificativo;
-    private String empresa_emisora;
-    @Basic
-    @Column(name = "firma", nullable = true)
-    private String firma;
-    private String motivo;
+    @Column(name = "id_solicitud", nullable = false)
+    private Long id_solicitud;
+    private String correo_jefatura;
     private String fecha_emision;
     private String fecha_cubridora;
     @OneToOne
-    @JoinColumn(name="id_empleado")
+    @JoinColumn(name = "id_empleado")
     private EmpleadoEntity empleado;
 }

@@ -15,12 +15,16 @@ import javax.persistence.*;
 public class EmpleadoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idempleado", nullable = false)
-    private Long idempleado;
+    @Column(name = "id_empleado", nullable = false)
+    private Long id_empleado;
     private String rut;
     private String apellidos;
     private String nombres;
-    private String fechanac;
+    private String fecha_nac;
     private String categoria;
-    private String fechain;
+    private String fecha_in;
+    @OneToOne(mappedBy = "empleado")
+    private JustificativoEntity justificativo;
+    @OneToOne(mappedBy = "empleado")
+    private SolicitudEntity solicitud;
 }

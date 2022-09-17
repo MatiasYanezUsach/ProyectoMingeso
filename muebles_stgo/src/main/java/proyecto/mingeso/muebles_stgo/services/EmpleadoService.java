@@ -20,23 +20,23 @@ public class EmpleadoService {
         return empleadoRepository.save(empleado);
     }
     public EmpleadoEntity crearEmpleado(EmpleadoEntity empleado){
-        EmpleadoEntity nuevoEmpleado = empleadoRepository.save(new EmpleadoEntity(empleado.getIdempleado(), empleado.getRut(), empleado.getApellidos(), empleado.getNombres(), empleado.getFechanac(), empleado.getCategoria(), empleado.getFechain()));
+        EmpleadoEntity nuevoEmpleado = empleadoRepository.save(new EmpleadoEntity(empleado.getId_empleado(), empleado.getRut(), empleado.getApellidos(), empleado.getNombres(), empleado.getFecha_nac(), empleado.getCategoria(), empleado.getFecha_in(), empleado.getJustificativo(),empleado.getSolicitud()));
         return guardarEmpleado(nuevoEmpleado);
     }
 
-    public Optional<EmpleadoEntity> obtenerPorId(Long idempleado){
-        return empleadoRepository.findById(idempleado);
+    public Optional<EmpleadoEntity> obtenerPorId(Long id_empleado){
+        return empleadoRepository.findById(id_empleado);
     }
 
-    public EmpleadoEntity modificarEmpleado(Long idempleado, EmpleadoEntity empleado){
-        Optional<EmpleadoEntity> empleadoPrev=obtenerPorId(idempleado);
-        EmpleadoEntity nuevoEmpleado = empleadoRepository.save(new EmpleadoEntity(idempleado, empleado.getRut(), empleado.getApellidos(), empleado.getNombres(), empleado.getFechanac(), empleado.getCategoria(), empleado.getFechain()));
+    public EmpleadoEntity modificarEmpleado(Long id_empleado, EmpleadoEntity empleado){
+        Optional<EmpleadoEntity> empleadoPrev=obtenerPorId(id_empleado);
+        EmpleadoEntity nuevoEmpleado = empleadoRepository.save(new EmpleadoEntity(id_empleado, empleado.getRut(), empleado.getApellidos(), empleado.getNombres(), empleado.getFecha_nac(), empleado.getCategoria(), empleado.getFecha_in(),empleado.getJustificativo(),empleado.getSolicitud()));
         return guardarEmpleado(nuevoEmpleado);
     }
 
-    public boolean eliminarEmpleado(Long idempleado){
+    public boolean eliminarEmpleado(Long id_empleado){
         try{
-            empleadoRepository.deleteById(idempleado);
+            empleadoRepository.deleteById(id_empleado);
             return true;
         }
         catch(Exception err){
