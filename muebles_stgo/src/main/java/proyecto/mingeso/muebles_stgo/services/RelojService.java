@@ -12,6 +12,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 @Service
 public class RelojService {
@@ -29,7 +33,9 @@ public class RelojService {
     }
 
     public boolean lectura(MultipartFile file){
-        String linea, fecha, hora, rut;
+        LocalTime hora;
+        LocalDate fecha;
+        String linea,rut;
         RelojEntity nuevaMarca = null;
         int id_marca = 1;
         try{
@@ -38,8 +44,8 @@ public class RelojService {
             linea = archivo.readLine();
             while(linea != null){
                 String datos[] = linea.split(";");
-                fecha = datos[0];
-                hora = datos[1];
+                fecha = LocalDate.parse(datos[0], DateTimeFormatter.ofPattern("yyyy/MM/dd", Locale.US));
+                hora = LocalTime.parse(datos[1], DateTimeFormatter.ofPattern("HH:mm", Locale.US));
                 rut = datos[2];
                 nuevaMarca = relojRepository.save(new RelojEntity((long) id_marca, fecha, hora,rut));
                 System.out.println(linea);
