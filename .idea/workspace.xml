@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="CRUD justificativo finalizado sin comprobacion de errores">
-      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/RelojEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/ImportarRelojController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/RelojRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/ImportarRelojService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/RelojService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/reloj.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/JustificativoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/JustificativoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SolicitudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SolicitudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/JustificativoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/JustificativoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SolicitudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SolicitudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -67,7 +69,9 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -122,6 +126,11 @@
       <workItem from="1663447542616" duration="4363000" />
       <workItem from="1663456323559" duration="1233000" />
       <workItem from="1663507281785" duration="88000" />
+      <workItem from="1663507948745" duration="2577000" />
+      <workItem from="1663533947180" duration="2018000" />
+      <workItem from="1663536334578" duration="9324000" />
+      <workItem from="1663614089942" duration="1549000" />
+      <workItem from="1663615796942" duration="608000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -155,8 +164,19 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="CRUD empleado finalizado sin comprobacion de errores" />
     <MESSAGE value="CRUD justificativo finalizado sin comprobacion de errores" />
     <option name="LAST_COMMIT_MESSAGE" value="CRUD justificativo finalizado sin comprobacion de errores" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.tool.schema.spi.CommandAcceptanceException" package="org.hibernate.tool.schema.spi" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
