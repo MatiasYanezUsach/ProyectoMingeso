@@ -16,7 +16,7 @@ public class JustificativoService {
     }
 
     public JustificativoEntity crearJustificativo(JustificativoEntity justificativo){
-        JustificativoEntity nuevoJustificativo = justificativoRepository.save(new JustificativoEntity(justificativo.getId_justificativo(), justificativo.getEmpresa_emisora(), justificativo.getFirma(),justificativo.getMotivo(), justificativo.getFecha_emision(), justificativo.getFecha_cubridora(),justificativo.getEmpleado()));
+        JustificativoEntity nuevoJustificativo = justificativoRepository.save(new JustificativoEntity(justificativo.getId_justificativo(), justificativo.getEmpresa_emisora(), justificativo.getFirma(),justificativo.getMotivo(), justificativo.getFecha_emision(), justificativo.getFecha_cubridora(),justificativo.getRut_empleado()));
         return guardarJustificativo(nuevoJustificativo);
     }
 }

@@ -20,7 +20,7 @@ public class EmpleadoService {
         return empleadoRepository.save(empleado);
     }
     public EmpleadoEntity crearEmpleado(EmpleadoEntity empleado){
-        EmpleadoEntity nuevoEmpleado = empleadoRepository.save(new EmpleadoEntity(empleado.getId_empleado(), empleado.getRut(), empleado.getApellidos(), empleado.getNombres(), empleado.getFecha_nac(), empleado.getCategoria(), empleado.getFecha_in(), empleado.getJustificativo(),empleado.getSolicitud()));
+        EmpleadoEntity nuevoEmpleado = empleadoRepository.save(new EmpleadoEntity(empleado.getId_empleado(), empleado.getRut(), empleado.getApellidos(), empleado.getNombres(), empleado.getFecha_nac(), empleado.getCategoria(), empleado.getFecha_in()));
         return guardarEmpleado(nuevoEmpleado);
     }
 
@@ -30,7 +30,7 @@ public class EmpleadoService {
 
     public EmpleadoEntity modificarEmpleado(Long id_empleado, EmpleadoEntity empleado){
         Optional<EmpleadoEntity> empleadoPrev=obtenerPorId(id_empleado);
-        EmpleadoEntity nuevoEmpleado = empleadoRepository.save(new EmpleadoEntity(id_empleado, empleado.getRut(), empleado.getApellidos(), empleado.getNombres(), empleado.getFecha_nac(), empleado.getCategoria(), empleado.getFecha_in(),empleado.getJustificativo(),empleado.getSolicitud()));
+        EmpleadoEntity nuevoEmpleado = empleadoRepository.save(new EmpleadoEntity(id_empleado, empleado.getRut(), empleado.getApellidos(), empleado.getNombres(), empleado.getFecha_nac(), empleado.getCategoria(), empleado.getFecha_in()));
         return guardarEmpleado(nuevoEmpleado);
     }
 

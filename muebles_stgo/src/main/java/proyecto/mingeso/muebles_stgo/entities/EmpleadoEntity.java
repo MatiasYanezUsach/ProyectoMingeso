@@ -1,11 +1,12 @@
 package proyecto.mingeso.muebles_stgo.entities;
 
-import com.sun.istack.NotNull;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "empleados")
@@ -20,11 +21,9 @@ public class EmpleadoEntity {
     private String rut;
     private String apellidos;
     private String nombres;
-    private String fecha_nac;
+    @JsonFormat(pattern="yyyy/MM/dd")
+    private LocalDate fecha_nac;
     private String categoria;
-    private String fecha_in;
-    @OneToOne(mappedBy = "empleado")
-    private JustificativoEntity justificativo;
-    @OneToOne(mappedBy = "empleado")
-    private SolicitudEntity solicitud;
+    @JsonFormat(pattern="yyyy/MM/dd")
+    private LocalDate fecha_in;
 }

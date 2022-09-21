@@ -1,10 +1,12 @@
 package proyecto.mingeso.muebles_stgo.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "justificativos")
@@ -21,9 +23,9 @@ public class JustificativoEntity {
     @Column(name = "firma", nullable = true)
     private String firma;
     private String motivo;
-    private String fecha_emision;
-    private String fecha_cubridora;
-    @OneToOne
-    @JoinColumn(name="id_empleado")
-    private EmpleadoEntity empleado;
+    @JsonFormat(pattern="yyyy/MM/dd")
+    private LocalDate fecha_emision;
+    @JsonFormat(pattern="yyyy/MM/dd")
+    private LocalDate fecha_cubridora;
+    private String rut_empleado;
 }
