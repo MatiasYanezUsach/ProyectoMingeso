@@ -17,15 +17,15 @@ public class EmpleadoController {
     private EmpleadoService empleadoService;
 
     @RequestMapping(value = "/empleados", method = RequestMethod.GET)
-    public ResponseEntity<EmpleadoEntity> obtenerEmpleados() {
+    public ResponseEntity<ArrayList<EmpleadoEntity>> obtenerEmpleados() {
         ArrayList<EmpleadoEntity> empleados = empleadoService.obtenerEmpleados();
-        return new ResponseEntity(empleados, HttpStatus.OK);
+        return new ResponseEntity<>(empleados, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/empleados/{id}", method = RequestMethod.GET)
-    public ResponseEntity<EmpleadoEntity> obtenerPorId(@PathVariable("id") long id) {
+    public ResponseEntity<Optional<EmpleadoEntity>> obtenerPorId(@PathVariable("id") long id) {
         Optional<EmpleadoEntity> empleado = empleadoService.obtenerPorId(id);
-        return new ResponseEntity(empleado, HttpStatus.OK);
+        return new ResponseEntity<>(empleado, HttpStatus.OK);
     }
     @RequestMapping(value = "/empleados/create", method = RequestMethod.POST)
     public ResponseEntity<EmpleadoEntity> crearEmpleado(@RequestBody EmpleadoEntity empleado) {
@@ -39,11 +39,11 @@ public class EmpleadoController {
     }
     @RequestMapping(value = "/empleados/eliminar/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<EmpleadoEntity> removerEmpleado(@PathVariable("id") long id) {
-        if(empleadoService.eliminarEmpleado(id) == true){
-            return new ResponseEntity(HttpStatus.OK);
+        if(empleadoService.eliminarEmpleado(id)){
+            return new ResponseEntity<>(HttpStatus.OK);
         }
         else{
-            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }

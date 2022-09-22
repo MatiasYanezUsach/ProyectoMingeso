@@ -29,7 +29,6 @@ public class EmpleadoService {
     }
 
     public EmpleadoEntity modificarEmpleado(Long id_empleado, EmpleadoEntity empleado){
-        Optional<EmpleadoEntity> empleadoPrev=obtenerPorId(id_empleado);
         EmpleadoEntity nuevoEmpleado = empleadoRepository.save(new EmpleadoEntity(id_empleado, empleado.getRut(), empleado.getApellidos(), empleado.getNombres(), empleado.getFecha_nac(), empleado.getCategoria(), empleado.getFecha_in()));
         return guardarEmpleado(nuevoEmpleado);
     }

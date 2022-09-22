@@ -11,14 +11,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Service
 public class ImportarRelojService {
-    private String folder="importaciones//";
     private final Logger logg = LoggerFactory.getLogger(ImportarRelojService.class);
 
     public MultipartFile save(MultipartFile file) {
         if (!file.isEmpty()) {
             try {
                 byte [] bytes= file.getBytes();
-                Path path = Paths.get( folder+file.getOriginalFilename() );
+                String folder = "importaciones//";
+                Path path = Paths.get( folder +file.getOriginalFilename() );
                 System.out.println(path.toAbsolutePath());
                 Files.write(path, bytes);
                 logg.info("Archivo guardado");

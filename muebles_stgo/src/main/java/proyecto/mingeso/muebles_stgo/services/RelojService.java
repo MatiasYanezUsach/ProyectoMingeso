@@ -7,7 +7,6 @@ import proyecto.mingeso.muebles_stgo.entities.RelojEntity;
 import proyecto.mingeso.muebles_stgo.repositories.RelojRepository;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -22,28 +21,24 @@ public class RelojService {
     @Autowired
     RelojRepository relojRepository;
 
-    private String folder="importaciones//";
-    public RelojEntity guardarMarca(RelojEntity marca){
-        return relojRepository.save(marca);
+    public void guardarMarca(RelojEntity marca){
+        relojRepository.save(marca);
     }
 
-    public RelojEntity crearMarca(RelojEntity marca){
-        RelojEntity nuevaMarca = relojRepository.save(new RelojEntity(marca.getId_marca(), marca.getFecha(), marca.getHora(),marca.getRut()));
-        return guardarMarca(nuevaMarca);
-    }
 
-    public boolean lectura(MultipartFile file){
+    public void lectura(MultipartFile file){
         LocalTime hora;
         LocalDate fecha;
         String linea,rut;
-        RelojEntity nuevaMarca = null;
+        RelojEntity nuevaMarca;
         int id_marca = 1;
         try{
-            Path path = Paths.get( folder+file.getOriginalFilename() );
+            String folder = "importaciones//";
+            Path path = Paths.get( folder +file.getOriginalFilename() );
             BufferedReader archivo = Files.newBufferedReader(path);
             linea = archivo.readLine();
             while(linea != null){
-                String datos[] = linea.split(";");
+                String[] datos = linea.split(";");
                 fecha = LocalDate.parse(datos[0], DateTimeFormatter.ofPattern("yyyy/MM/dd", Locale.US));
                 hora = LocalTime.parse(datos[1], DateTimeFormatter.ofPattern("HH:mm", Locale.US));
                 rut = datos[2];
@@ -53,15 +48,8 @@ public class RelojService {
                 guardarMarca(nuevaMarca);
                 id_marca = id_marca + 1;
             }
-            return true;
-        }
-        catch (FileNotFoundException exception){
+        } catch (IOException exception){
             System.err.println(exception.getMessage());
-            return false;
-        }
-        catch (IOException exception){
-            System.err.println(exception.getMessage());
-            return false;
         }
     }
 }

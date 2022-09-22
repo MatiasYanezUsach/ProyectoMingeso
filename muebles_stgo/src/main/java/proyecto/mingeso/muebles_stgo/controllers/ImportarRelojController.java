@@ -32,11 +32,10 @@ public class ImportarRelojController {
         if (Objects.equals(nombreArchivo, "DATA.txt")) {
             relojService.lectura(importarRelojService.save(file));
             ms.addFlashAttribute("mensaje", "Archivo importado correctamente");
-            return "redirect:/";
         }
         else{
             ms.addFlashAttribute("mensaje", "El archivo ingresado no puede ser importado");
-            return "redirect:/";
         }
+        return "redirect:/";
     }
 }

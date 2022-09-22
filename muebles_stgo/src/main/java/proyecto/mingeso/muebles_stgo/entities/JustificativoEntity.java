@@ -20,7 +20,7 @@ public class JustificativoEntity {
     private Long id_justificativo;
     private String empresa_emisora;
     @Basic
-    @Column(name = "firma", nullable = true)
+    @Column(name = "firma", nullable = false)
     private String firma;
     private String motivo;
     @JsonFormat(pattern="yyyy/MM/dd")
