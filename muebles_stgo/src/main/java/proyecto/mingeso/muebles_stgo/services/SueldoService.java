@@ -2,10 +2,7 @@ package proyecto.mingeso.muebles_stgo.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import proyecto.mingeso.muebles_stgo.entities.EmpleadoEntity;
-import proyecto.mingeso.muebles_stgo.entities.JustificativoEntity;
-import proyecto.mingeso.muebles_stgo.entities.RelojEntity;
-import proyecto.mingeso.muebles_stgo.entities.SolicitudEntity;
+import proyecto.mingeso.muebles_stgo.entities.*;
 import proyecto.mingeso.muebles_stgo.repositories.JustificativoRepository;
 import proyecto.mingeso.muebles_stgo.repositories.RelojRepository;
 import proyecto.mingeso.muebles_stgo.repositories.SolicitudRepository;
@@ -23,6 +20,12 @@ public class SueldoService {
     RelojRepository relojRepository;
     SolicitudRepository solicitudRepository;
     JustificativoRepository justificativoRepository;
+
+    public String nombreCompletoEmpleado (EmpleadoEntity empleado){
+        String apellidos = empleado.getApellidos();
+        String nombre = empleado.getNombres();
+        return apellidos+" "+nombre;
+    }
 
     public double calcularSueldoFijoMensual (EmpleadoEntity empleado){
         double sueldoMensual = 0;
@@ -134,4 +137,33 @@ public class SueldoService {
        }
        return montoPorAtraso;
    }
+   public double calcularSueldoBruto(EmpleadoEntity empleado){
+        double descuentos = montoDescuentosAtrasos(empleado);
+        double bonificaciones = montoBonificacionAniosServicio(empleado);
+        double montoHoraExtra = montoPagoHorasExtras(empleado);
+        double sueldoFijo = calcularSueldoFijoMensual(empleado);
+        return bonificaciones + montoHoraExtra + (sueldoFijo - descuentos);
+    }
+    public double calcularCotizacionPrevisional(EmpleadoEntity empleado){
+        double sueldoBruto = calcularSueldoBruto(empleado);
+        return sueldoBruto * 0.1;
+    }
+    public double calcularCotizacionPlanSalud(EmpleadoEntity empleado){
+        double sueldoBruto = calcularSueldoBruto(empleado);
+        return sueldoBruto * 0.08;
+    }
+    public double calcularSueldoFinal(EmpleadoEntity empleado){
+        double sueldoBruto = calcularSueldoBruto(empleado);
+        double cotizacionPlanSalud = calcularCotizacionPlanSalud(empleado);
+        double cotizacionPrevisional = calcularCotizacionPrevisional(empleado);
+        return (sueldoBruto-cotizacionPrevisional)-cotizacionPlanSalud;
+    }
+    public SueldoEntity guardarSueldo(SueldoEntity sueldo){
+        return sueldoRepository.save(sueldo);
+    }
+    public SueldoEntity crearSueldo (SueldoEntity sueldo, EmpleadoEntity empleado){
+        SueldoEntity nuevoSueldo = sueldoRepository.save(new SueldoEntity(sueldo.getId_sueldo(),empleado.getRut(),nombreCompletoEmpleado(empleado),empleado.getCategoria(),calcularAniosServicio(empleado),calcularSueldoFijoMensual(empleado),montoBonificacionAniosServicio(empleado),montoPagoHorasExtras(empleado),montoDescuentosAtrasos(empleado),calcularSueldoBruto(empleado),calcularCotizacionPrevisional(empleado),calcularCotizacionPlanSalud(empleado),calcularSueldoFinal(empleado)));
+        return guardarSueldo(nuevoSueldo);
+    }
+
 }
