@@ -3,13 +3,10 @@ package proyecto.mingeso.muebles_stgo.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import proyecto.mingeso.muebles_stgo.entities.*;
-import proyecto.mingeso.muebles_stgo.repositories.JustificativoRepository;
-import proyecto.mingeso.muebles_stgo.repositories.RelojRepository;
-import proyecto.mingeso.muebles_stgo.repositories.SolicitudRepository;
-import proyecto.mingeso.muebles_stgo.repositories.SueldoRepository;
+import proyecto.mingeso.muebles_stgo.repositories.*;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -17,9 +14,14 @@ import java.util.Objects;
 public class SueldoService {
     @Autowired
     SueldoRepository sueldoRepository;
+    @Autowired
     RelojRepository relojRepository;
+    @Autowired
     SolicitudRepository solicitudRepository;
+    @Autowired
     JustificativoRepository justificativoRepository;
+    @Autowired
+    EmpleadoRepository empleadoRepository;
 
     public String nombreCompletoEmpleado (EmpleadoEntity empleado){
         String apellidos = empleado.getApellidos();
@@ -44,24 +46,31 @@ public class SueldoService {
         double montoPorHora = 0;
         double categoria = 0;
         int horasExtras;
-        LocalDateTime horaSalida = LocalDateTime.parse("18:00");
+        int cantidadSolicitudes = 0;
+        LocalTime horaSalida = LocalTime.parse("18:00");
         ArrayList<SolicitudEntity> registroSolicitudes = solicitudRepository.findByRut(empleado.getRut());
         ArrayList<RelojEntity> registroHoras = relojRepository.findByRut(empleado.getRut());
+        for(SolicitudEntity solicitudes : registroSolicitudes) {
+            cantidadSolicitudes++;
+        }
+        if (cantidadSolicitudes <= 0) {
+            return montoPorHora;
+        }
         if (Objects.equals(empleado.getCategoria(), "A")){
             categoria = 25000;
         }
-        if (Objects.equals(empleado.getCategoria(), "B")){
+        if (Objects.equals(empleado.getCategoria(), "B")) {
             categoria = 20000;
         }
         if (Objects.equals(empleado.getCategoria(), "C")){
-            categoria = 10000;
+        categoria = 10000;
         }
-        for(int i = 0; registroSolicitudes.get(i) != null; i++){
-            for(int j = 0; registroHoras.get(j) != null; j++){
-                if(registroSolicitudes.get(i).getFecha_cubridora() == (registroHoras.get(j).getFecha())){
+        for (int i = 0; i < cantidadSolicitudes; i++) {
+            for (int j = 0; registroHoras.get(j) != null; j++) {
+                if (registroSolicitudes.get(i).getFecha_cubridora() == (registroHoras.get(j).getFecha())) {
                     horasExtras = registroHoras.get(j).getHora().getHour() - horaSalida.getHour();
-                    if(horasExtras > 1){
-                        montoPorHora = montoPorHora + categoria*horasExtras;
+                    if (horasExtras > 1) {
+                        montoPorHora = montoPorHora + categoria * horasExtras;
                     }
                 }
             }
@@ -100,9 +109,17 @@ public class SueldoService {
    public double montoDescuentosAtrasos(EmpleadoEntity empleado) {
        double montoPorAtraso = 0;
        double sueldoMensual = calcularSueldoFijoMensual (empleado);
+       int cantidadJustificativos = 0;
+       int cantidadMarcas = 0;
        ArrayList<JustificativoEntity> registroJustificados = justificativoRepository.findByRut(empleado.getRut());
        ArrayList<RelojEntity> registroHoras = relojRepository.findByRut(empleado.getRut());
-       for(int i = 0; registroHoras.get(i) != null; i++) {
+       for(JustificativoEntity justificativos : registroJustificados) {
+           cantidadJustificativos++;
+       }
+       for(RelojEntity marcas : registroHoras) {
+           cantidadMarcas++;
+       }
+       for(int i = 0; i < cantidadMarcas; i++) {
            if (registroHoras.get(i).getHora().getHour() == 8){
                if (registroHoras.get(i).getHora().getMinute() > 10 && registroHoras.get(i).getHora().getMinute() <= 25){
                    montoPorAtraso = montoPorAtraso + sueldoMensual*0.01;
@@ -128,7 +145,7 @@ public class SueldoService {
                }
            }
        }
-       for(int i = 0; registroJustificados.get(i) != null; i++) {
+       for(int i = 0; i < cantidadJustificativos; i++) {
            for(int j = 0; registroHoras.get(j) != null; j++){
                if(registroJustificados.get(i).getFecha_cubridora() == registroHoras.get(j).getFecha()){
                    montoPorAtraso = montoPorAtraso - sueldoMensual * 0.15;
@@ -158,12 +175,20 @@ public class SueldoService {
         double cotizacionPrevisional = calcularCotizacionPrevisional(empleado);
         return (sueldoBruto-cotizacionPrevisional)-cotizacionPlanSalud;
     }
-    public SueldoEntity guardarSueldo(SueldoEntity sueldo){
-        return sueldoRepository.save(sueldo);
+    public void crearSueldoEmpleado (SueldoEntity sueldo, EmpleadoEntity empleado){
+        sueldoRepository.save(new SueldoEntity(sueldo.getId_sueldo(), empleado.getRut(), nombreCompletoEmpleado(empleado), empleado.getCategoria(), calcularAniosServicio(empleado), calcularSueldoFijoMensual(empleado), montoBonificacionAniosServicio(empleado), montoPagoHorasExtras(empleado), montoDescuentosAtrasos(empleado), calcularSueldoBruto(empleado), calcularCotizacionPrevisional(empleado), calcularCotizacionPlanSalud(empleado), calcularSueldoFinal(empleado)));
     }
-    public SueldoEntity crearSueldo (SueldoEntity sueldo, EmpleadoEntity empleado){
-        SueldoEntity nuevoSueldo = sueldoRepository.save(new SueldoEntity(sueldo.getId_sueldo(),empleado.getRut(),nombreCompletoEmpleado(empleado),empleado.getCategoria(),calcularAniosServicio(empleado),calcularSueldoFijoMensual(empleado),montoBonificacionAniosServicio(empleado),montoPagoHorasExtras(empleado),montoDescuentosAtrasos(empleado),calcularSueldoBruto(empleado),calcularCotizacionPrevisional(empleado),calcularCotizacionPlanSalud(empleado),calcularSueldoFinal(empleado)));
-        return guardarSueldo(nuevoSueldo);
+    public void sueldosGenerales (ArrayList<EmpleadoEntity> empleados){
+        int cantidadEmpleados = 0;
+        for(EmpleadoEntity cantEmpleados : empleados) {
+            cantidadEmpleados++;
+        }
+        SueldoEntity nuevoSueldo = sueldoRepository.save(new SueldoEntity(1L, empleados.get(0).getRut(),nombreCompletoEmpleado(empleados.get(0)),empleados.get(0).getCategoria(),calcularAniosServicio(empleados.get(0)),calcularSueldoFijoMensual(empleados.get(0)),montoBonificacionAniosServicio(empleados.get(0)),montoPagoHorasExtras(empleados.get(0)),montoDescuentosAtrasos(empleados.get(0)),calcularSueldoBruto(empleados.get(0)),calcularCotizacionPrevisional(empleados.get(0)),calcularCotizacionPlanSalud(empleados.get(0)),calcularSueldoFinal(empleados.get(0))));
+        for(int i = 1; i < cantidadEmpleados; i++){
+            crearSueldoEmpleado(nuevoSueldo, empleados.get(i));
+        }
     }
-
+    public ArrayList<SueldoEntity> obtenerPlanilla(){
+        return (ArrayList<SueldoEntity>) sueldoRepository.findAll();
+    }
 }

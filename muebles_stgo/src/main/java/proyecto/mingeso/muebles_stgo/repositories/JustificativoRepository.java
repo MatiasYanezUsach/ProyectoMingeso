@@ -10,6 +10,6 @@ import java.util.ArrayList;
 
 @Repository
 public interface JustificativoRepository extends JpaRepository<JustificativoEntity, Long> {
-    @Query(value="select j.fecha_cubridora from justificativos as j where j.rut_empleado = :rutDado",nativeQuery = true)
-    ArrayList<JustificativoEntity> findByRut(@Param("rutDado") String rutDado);
+    @Query(value="select * from justificativos as j where j.rut_empleado = :rut_dado",nativeQuery = true)
+    ArrayList<JustificativoEntity> findByRut(@Param("rut_dado") String rut_dado);
 }

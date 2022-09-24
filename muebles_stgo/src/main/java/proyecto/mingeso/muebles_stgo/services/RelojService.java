@@ -14,12 +14,17 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Locale;
 
 @Service
 public class RelojService {
     @Autowired
     RelojRepository relojRepository;
+
+    public ArrayList<RelojEntity> obtenerMarcas(){
+        return (ArrayList<RelojEntity>) relojRepository.findAll();
+    }
 
     public void guardarMarca(RelojEntity marca){
         relojRepository.save(marca);

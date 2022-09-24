@@ -10,6 +10,6 @@ import java.util.ArrayList;
 
 @Repository
 public interface SolicitudRepository extends JpaRepository<SolicitudEntity, Long> {
-    @Query(value="select s.fecha_cubridora from solicitudes as s where s.rut_empleado = :rutDado",nativeQuery = true)
-    ArrayList<SolicitudEntity> findByRut(@Param("rutDado") String rutDado);
+    @Query(value="select * from solicitudes as s where s.rut_empleado = :rut_dado",nativeQuery = true)
+    ArrayList<SolicitudEntity> findByRut(@Param("rut_dado") String rut_dado);
 }

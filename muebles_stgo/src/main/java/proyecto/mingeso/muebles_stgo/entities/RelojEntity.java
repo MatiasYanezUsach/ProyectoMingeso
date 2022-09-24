@@ -25,5 +25,5 @@ public class RelojEntity {
     private LocalDate fecha;
     @JsonFormat(pattern="HH:mm")
     private LocalTime hora;
-    private String rut;
+    private String rut_empleado;
 }

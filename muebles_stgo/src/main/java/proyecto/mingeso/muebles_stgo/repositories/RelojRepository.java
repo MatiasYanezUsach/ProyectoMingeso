@@ -10,6 +10,6 @@ import java.util.ArrayList;
 
 @Repository
 public interface RelojRepository extends JpaRepository<RelojEntity, Long> {
-    @Query(value="select h.hora, h.fecha from marcas as h where h.rut = :rutDado", nativeQuery = true)
-    ArrayList<RelojEntity> findByRut(@Param("rutDado") String rutDado);
+    @Query(value="select * from marcas as h where h.rut_empleado = :rut_dado", nativeQuery = true)
+    ArrayList<RelojEntity> findByRut(@Param("rut_dado") String rut_dado);
 }
