@@ -8,6 +8,8 @@ import proyecto.mingeso.muebles_stgo.repositories.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Objects;
 
 @Service
@@ -22,6 +24,32 @@ public class SueldoService {
     JustificativoRepository justificativoRepository;
     @Autowired
     EmpleadoRepository empleadoRepository;
+
+    int findeMes = Calendar.getInstance().getActualMaximum(Calendar.DAY_OF_MONTH);
+    int mesActual = Calendar.getInstance().get(Calendar.MONTH);
+    int anioActual = Calendar.getInstance().get(Calendar.YEAR);
+    Date inicioMes = new Date(anioActual,mesActual, 1);
+    Date finMes = new Date(anioActual,mesActual, findeMes);
+    static long diasHabiles(Date inicioMes, Date finalMes){
+        Calendar fechaActual = Calendar.getInstance();
+        fechaActual.setTime(inicioMes);
+        int diasSemana = fechaActual.get(Calendar.DAY_OF_WEEK);
+        fechaActual.add(Calendar.DAY_OF_WEEK, -diasSemana);
+        Calendar fechaActual2 = Calendar.getInstance();
+        fechaActual2.setTime(finalMes);
+        int diasSemana2 = fechaActual2.get(Calendar.DAY_OF_WEEK);
+        fechaActual2.add(Calendar.DAY_OF_WEEK, -diasSemana2);
+        long dias = (fechaActual2.getTimeInMillis()-fechaActual.getTimeInMillis())/(1000*60*60*24);
+        long diasTrabajables = dias-(dias*2/7);
+        if (diasSemana == Calendar.SUNDAY) {
+            diasSemana = Calendar.MONDAY;
+        }
+        if (diasSemana2 == Calendar.SUNDAY) {
+            diasSemana2 = Calendar.MONDAY;
+        }
+        return diasTrabajables-diasSemana+diasSemana2+1;
+    }
+
 
     public String nombreCompletoEmpleado (EmpleadoEntity empleado){
         String apellidos = empleado.getApellidos();
@@ -47,12 +75,17 @@ public class SueldoService {
         double categoria = 0;
         int horasExtras;
         int cantidadSolicitudes = 0;
+        int cantidadMarcas = 0;
         LocalTime horaSalida = LocalTime.parse("18:00");
         ArrayList<SolicitudEntity> registroSolicitudes = solicitudRepository.findByRut(empleado.getRut());
         ArrayList<RelojEntity> registroHoras = relojRepository.findByRut(empleado.getRut());
         for(SolicitudEntity solicitudes : registroSolicitudes) {
             cantidadSolicitudes++;
         }
+        for(RelojEntity marcas : registroHoras) {
+            cantidadMarcas++;
+        }
+
         if (cantidadSolicitudes <= 0) {
             return montoPorHora;
         }
@@ -66,11 +99,13 @@ public class SueldoService {
         categoria = 10000;
         }
         for (int i = 0; i < cantidadSolicitudes; i++) {
-            for (int j = 0; registroHoras.get(j) != null; j++) {
-                if (registroSolicitudes.get(i).getFecha_cubridora() == (registroHoras.get(j).getFecha())) {
+            System.out.println("a"+ registroSolicitudes.get(i).getFecha_cubridora());
+            for (int j = 0; j < cantidadMarcas; j++) {
+                System.out.println("b"+ registroHoras.get(j).getFecha());
+                if (registroSolicitudes.get(i).getFecha_cubridora().getDayOfMonth() == registroHoras.get(j).getFecha().getDayOfMonth()) {
                     horasExtras = registroHoras.get(j).getHora().getHour() - horaSalida.getHour();
-                    if (horasExtras > 1) {
-                        montoPorHora = montoPorHora + categoria * horasExtras;
+                    if (horasExtras >= 1) {
+                        montoPorHora = montoPorHora + (categoria * horasExtras);
                     }
                 }
             }
@@ -110,7 +145,9 @@ public class SueldoService {
        double montoPorAtraso = 0;
        double sueldoMensual = calcularSueldoFijoMensual (empleado);
        int cantidadJustificativos = 0;
+       int reservaJustivicativos = 0;
        int cantidadMarcas = 0;
+       double diasHabiles = ((double) diasHabiles(inicioMes,finMes)) * 2;
        ArrayList<JustificativoEntity> registroJustificados = justificativoRepository.findByRut(empleado.getRut());
        ArrayList<RelojEntity> registroHoras = relojRepository.findByRut(empleado.getRut());
        for(JustificativoEntity justificativos : registroJustificados) {
@@ -119,6 +156,7 @@ public class SueldoService {
        for(RelojEntity marcas : registroHoras) {
            cantidadMarcas++;
        }
+       reservaJustivicativos = cantidadJustificativos;
        for(int i = 0; i < cantidadMarcas; i++) {
            if (registroHoras.get(i).getHora().getHour() == 8){
                if (registroHoras.get(i).getHora().getMinute() > 10 && registroHoras.get(i).getHora().getMinute() <= 25){
@@ -144,13 +182,22 @@ public class SueldoService {
                    montoPorAtraso = montoPorAtraso + sueldoMensual * 0.15;
                }
            }
+           diasHabiles = diasHabiles - 1;
        }
+       diasHabiles = Math.ceil(diasHabiles/2);
        for(int i = 0; i < cantidadJustificativos; i++) {
-           for(int j = 0; registroHoras.get(j) != null; j++){
+           for(int j = 0; j < cantidadMarcas; j++){
                if(registroJustificados.get(i).getFecha_cubridora() == registroHoras.get(j).getFecha()){
                    montoPorAtraso = montoPorAtraso - sueldoMensual * 0.15;
+                   reservaJustivicativos = reservaJustivicativos -1;
                }
            }
+       }
+       if(diasHabiles > 0 && reservaJustivicativos == 0){
+           montoPorAtraso = montoPorAtraso + (sueldoMensual * 0.15)*diasHabiles;
+       }
+       if(diasHabiles > reservaJustivicativos){
+           montoPorAtraso = montoPorAtraso + (sueldoMensual * 0.15)*(diasHabiles - reservaJustivicativos);
        }
        return montoPorAtraso;
    }

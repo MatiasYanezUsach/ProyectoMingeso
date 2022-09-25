@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="CRUD justificativo finalizado sin comprobacion de errores">
-      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/RelojController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SueldoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/RelojEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/RelojEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/JustificativoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/JustificativoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/RelojRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/RelojRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/SolicitudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/SolicitudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/RelojService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/RelojService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importaciones/DATA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/importaciones/DATA.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SueldoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SueldoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,6 +141,8 @@
       <workItem from="1663887116589" duration="648000" />
       <workItem from="1663891462286" duration="6973000" />
       <workItem from="1664051770675" duration="4585000" />
+      <workItem from="1664057407636" duration="6848000" />
+      <workItem from="1664131631275" duration="1859000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
