@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="CRUD justificativo finalizado sin comprobacion de errores">
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/test/java/proyecto/mingeso/muebles_stgo/SueldoServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importaciones/DATA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/importaciones/DATA.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/JustificativoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/JustificativoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SueldoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SueldoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +29,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/EmpleadoEntity.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SueldoService.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/muebles_stgo/src/test/java/proyecto/mingeso/muebles_stgo/SueldoServiceTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -80,7 +83,22 @@
     &quot;spring.configuration.checksum&quot;: &quot;8a66a5ad66fa01a397030ca467e247dc&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.MueblesStgoApplication">
+    <configuration name="SueldoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="muebles_stgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="proyecto.mingeso.muebles_stgo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="proyecto.mingeso.muebles_stgo" />
+      <option name="MAIN_CLASS_NAME" value="proyecto.mingeso.muebles_stgo.SueldoServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MueblesStgoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="muebles_stgo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="proyecto.mingeso.muebles_stgo.MueblesStgoApplication" />
@@ -97,6 +115,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MueblesStgoApplication" />
+        <item itemvalue="JUnit.SueldoServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -143,6 +162,8 @@
       <workItem from="1664051770675" duration="4585000" />
       <workItem from="1664057407636" duration="6848000" />
       <workItem from="1664131631275" duration="1859000" />
+      <workItem from="1664240044138" duration="276000" />
+      <workItem from="1664240416128" duration="148000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
