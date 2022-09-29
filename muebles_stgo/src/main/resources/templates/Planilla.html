@@ -9,7 +9,7 @@
 <div class="container-sm">
     <table class="table">
         <thead class="thead-dark">
-        <tr>
+        <tr class="m-4">
             <th>ID</th>
             <th>Rut</th>
             <th>Nombre</th>
@@ -40,10 +40,6 @@
             <td th:text="${sueldo.cotizacion_previsional}"></td>
             <td th:text="${sueldo.cotizacion_salud}"></td>
             <td th:text="${sueldo.monto_sueldo_final}"></td>
-            <td>
-                <a class="btn btn-primary" href="#" role="button">Editar</a>
-                <a class="btn btn-danger" href="#" role="button">Eliminar</a>
-            </td>
         </tr>
         </tbody>
     </table>

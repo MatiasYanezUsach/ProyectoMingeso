@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="modificaciones vistas">
-      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/Planilla.html" afterDir="false" />
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="avance vista planilla de sueldos">
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/RelojMarcas.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/JustificativoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/JustificativoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SolicitudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SolicitudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SueldoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SueldoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/JustificativoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/JustificativoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SolicitudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SolicitudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/RelojController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/RelojController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/Home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/Planilla.html" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/Planilla.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +178,7 @@
       <workItem from="1664405216759" duration="184000" />
       <workItem from="1664405440703" duration="3797000" />
       <workItem from="1664410621073" duration="3494000" />
-      <workItem from="1664485697260" duration="4646000" />
+      <workItem from="1664485697260" duration="7586000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -225,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664466823485</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="avance vista planilla de sueldos">
+      <created>1664491687662</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664491687662</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +253,8 @@
     <MESSAGE value="Implementacion vista Login" />
     <MESSAGE value="Implementacion vista SubirJustificativo" />
     <MESSAGE value="modificaciones vistas" />
-    <option name="LAST_COMMIT_MESSAGE" value="modificaciones vistas" />
+    <MESSAGE value="avance vista planilla de sueldos" />
+    <option name="LAST_COMMIT_MESSAGE" value="avance vista planilla de sueldos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
