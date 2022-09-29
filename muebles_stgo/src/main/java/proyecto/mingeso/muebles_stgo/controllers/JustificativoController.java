@@ -15,8 +15,8 @@ public class JustificativoController {
     private JustificativoService justificativoService;
 
     @PostMapping("/subirJustificativo")
-    public String subirJustificativo(@RequestParam("rut") String rut_empleado, @RequestParam("fecha") LocalDate fecha_cubridora) {
-        JustificativoEntity nuevoJustificativo = justificativoService.crearJustificativo(rut_empleado, fecha_cubridora);
+    public String subirJustificativo(@RequestParam("rut") String rut_empleado, @RequestParam("fecha") String fecha_cubridora) {
+        JustificativoEntity nuevoJustificativo = justificativoService.crearJustificativo(rut_empleado, LocalDate.parse(fecha_cubridora));
         justificativoService.guardarJustificativo(nuevoJustificativo);
         return "redirect:/";
     }
