@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="CRUD justificativo finalizado sin comprobacion de errores">
-      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/LogIn.html" afterDir="false" />
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Implementacion vista Login">
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/VistaJustificativo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,23 +67,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mfym2/Desktop/Proyecto fingeso&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;8a66a5ad66fa01a397030ca467e247dc&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/mfym2/Desktop/Proyecto fingeso",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "spring.configuration.checksum": "8a66a5ad66fa01a397030ca467e247dc"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Spring Boot.MueblesStgoApplication">
     <configuration name="SueldoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="muebles_stgo" />
@@ -172,7 +173,7 @@
       <workItem from="1664376368255" duration="4780000" />
       <workItem from="1664393550576" duration="10564000" />
       <workItem from="1664405216759" duration="184000" />
-      <workItem from="1664405440703" duration="299000" />
+      <workItem from="1664405440703" duration="3559000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -188,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663301009113</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implementacion vista Login">
+      <created>1664405859451</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664405859451</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +217,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="CRUD empleado finalizado sin comprobacion de errores" />
     <MESSAGE value="CRUD justificativo finalizado sin comprobacion de errores" />
-    <option name="LAST_COMMIT_MESSAGE" value="CRUD justificativo finalizado sin comprobacion de errores" />
+    <MESSAGE value="Implementacion vista Login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementacion vista Login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
