@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Implementacion vista Login">
-      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/VistaJustificativo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Implementacion vista SubirJustificativo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,7 +170,7 @@
       <workItem from="1664376368255" duration="4780000" />
       <workItem from="1664393550576" duration="10564000" />
       <workItem from="1664405216759" duration="184000" />
-      <workItem from="1664405440703" duration="3559000" />
+      <workItem from="1664405440703" duration="3718000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -196,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664405859451</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implementacion vista SubirJustificativo">
+      <created>1664409751277</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664409751277</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +222,8 @@
     <MESSAGE value="CRUD empleado finalizado sin comprobacion de errores" />
     <MESSAGE value="CRUD justificativo finalizado sin comprobacion de errores" />
     <MESSAGE value="Implementacion vista Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementacion vista Login" />
+    <MESSAGE value="Implementacion vista SubirJustificativo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementacion vista SubirJustificativo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
