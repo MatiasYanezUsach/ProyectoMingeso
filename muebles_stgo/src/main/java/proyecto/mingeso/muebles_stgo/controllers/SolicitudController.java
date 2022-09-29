@@ -15,7 +15,7 @@ public class SolicitudController {
 
     @RequestMapping(value = "/solicitudes/create", method = RequestMethod.POST)
     public ResponseEntity<SolicitudEntity> crearSolitud(@RequestBody SolicitudEntity solicitud) {
-        SolicitudEntity nuevaSolicitud = solicitudService.crearSolicitud(solicitud);
+        SolicitudEntity nuevaSolicitud = solicitudService.guardarSolicitud(solicitud);
         return new ResponseEntity<>(nuevaSolicitud, HttpStatus.CREATED);
     }
 }

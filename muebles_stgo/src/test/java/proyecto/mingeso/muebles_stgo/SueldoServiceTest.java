@@ -104,9 +104,7 @@ public class SueldoServiceTest {
         empleado.setCategoria("A");
         empleado.setFecha_in(LocalDate.parse("2018-09-09"));
         empleado.setFecha_nac(LocalDate.parse("2001-03-02"));
-        solicitud.setCorreo_jefatura("empresa@muebesstgo.com");
         solicitud.setFecha_cubridora(LocalDate.parse("2022-09-20"));
-        solicitud.setFecha_emision(LocalDate.parse("2022-09-19"));
         solicitud.setRut_empleado("20.580.291-6");
         marca.setFecha(LocalDate.parse("2022-09-20"));
         marca.setHora(LocalTime.parse("20:00"));
@@ -126,9 +124,7 @@ public class SueldoServiceTest {
         empleado.setCategoria("B");
         empleado.setFecha_in(LocalDate.parse("2018-09-09"));
         empleado.setFecha_nac(LocalDate.parse("2001-03-02"));
-        solicitud.setCorreo_jefatura("empresa@muebesstgo.com");
         solicitud.setFecha_cubridora(LocalDate.parse("2022-09-20"));
-        solicitud.setFecha_emision(LocalDate.parse("2022-09-19"));
         solicitud.setRut_empleado("20.580.291-6");
         marca.setFecha(LocalDate.parse("2022-09-20"));
         marca.setHora(LocalTime.parse("20:00"));
@@ -148,9 +144,7 @@ public class SueldoServiceTest {
         empleado.setCategoria("C");
         empleado.setFecha_in(LocalDate.parse("2018-09-09"));
         empleado.setFecha_nac(LocalDate.parse("2001-03-02"));
-        solicitud.setCorreo_jefatura("empresa@muebesstgo.com");
         solicitud.setFecha_cubridora(LocalDate.parse("2022-09-20"));
-        solicitud.setFecha_emision(LocalDate.parse("2022-09-19"));
         solicitud.setRut_empleado("20.580.291-6");
         marca.setFecha(LocalDate.parse("2022-09-20"));
         marca.setHora(LocalTime.parse("20:00"));
@@ -170,9 +164,7 @@ public class SueldoServiceTest {
         empleado.setCategoria("D");
         empleado.setFecha_in(LocalDate.parse("2018-09-09"));
         empleado.setFecha_nac(LocalDate.parse("2001-03-02"));
-        solicitud.setCorreo_jefatura("empresa@muebesstgo.com");
         solicitud.setFecha_cubridora(LocalDate.parse("2022-09-20"));
-        solicitud.setFecha_emision(LocalDate.parse("2022-09-19"));
         solicitud.setRut_empleado("20.580.291-6");
         marca.setFecha(LocalDate.parse("2022-09-20"));
         marca.setHora(LocalTime.parse("20:00"));
@@ -436,11 +428,7 @@ public class SueldoServiceTest {
         empleado.setFecha_in(LocalDate.parse("2018-09-09"));
         empleado.setFecha_nac(LocalDate.parse("2001-03-02"));
         justificativo.setFecha_cubridora(LocalDate.parse("2022-09-20"));
-        justificativo.setMotivo("cita medico");
-        justificativo.setEmpresa_emisora("MueblesSTGO");
-        justificativo.setFecha_emision(LocalDate.parse("2022-09-20"));
         justificativo.setRut_empleado("20.580.291-6");
-        justificativo.setFirma("MueblesStgo");
         marca.setFecha(LocalDate.parse("2022-09-20"));
         marca.setHora(LocalTime.parse("09:11"));
         marca.setRut_empleado("20.580.291-6");
@@ -477,11 +465,7 @@ public class SueldoServiceTest {
         empleado.setFecha_in(LocalDate.parse("2018-09-09"));
         empleado.setFecha_nac(LocalDate.parse("2001-03-02"));
         justificativo.setFecha_cubridora(LocalDate.parse("2022-09-20"));
-        justificativo.setMotivo("cita medico");
-        justificativo.setEmpresa_emisora("MueblesSTGO");
-        justificativo.setFecha_emision(LocalDate.parse("2022-09-20"));
         justificativo.setRut_empleado("20.580.291-6");
-        justificativo.setFirma("MueblesStgo");
         ArrayList<JustificativoEntity> justificados = new ArrayList<>();
         justificados.add(justificativo);
         ArrayList<RelojEntity> marcas = new ArrayList<>();
@@ -518,9 +502,7 @@ public class SueldoServiceTest {
         empleado.setCategoria("A");
         empleado.setFecha_in(LocalDate.parse("2010-09-09"));
         empleado.setFecha_nac(LocalDate.parse("1980-03-02"));
-        solicitud.setCorreo_jefatura("empresa@muebesstgo.com");
         solicitud.setFecha_cubridora(LocalDate.parse("2022-09-20"));
-        solicitud.setFecha_emision(LocalDate.parse("2022-09-20"));
         solicitud.setRut_empleado("20.580.291-6");
         ArrayList<JustificativoEntity> justificados = new ArrayList<>();
         marca.setFecha(LocalDate.parse("2022-09-20"));
@@ -567,9 +549,7 @@ public class SueldoServiceTest {
         empleado.setCategoria("A");
         empleado.setFecha_in(LocalDate.parse("2010-09-09"));
         empleado.setFecha_nac(LocalDate.parse("1980-03-02"));
-        solicitud.setCorreo_jefatura("empresa@muebesstgo.com");
         solicitud.setFecha_cubridora(LocalDate.parse("2022-09-20"));
-        solicitud.setFecha_emision(LocalDate.parse("2022-09-20"));
         solicitud.setRut_empleado("20.580.291-6");
         ArrayList<JustificativoEntity> justificados = new ArrayList<>();
         marca.setFecha(LocalDate.parse("2022-09-20"));
@@ -616,9 +596,8 @@ public class SueldoServiceTest {
         empleado.setCategoria("A");
         empleado.setFecha_in(LocalDate.parse("2010-09-09"));
         empleado.setFecha_nac(LocalDate.parse("1980-03-02"));
-        solicitud.setCorreo_jefatura("empresa@muebesstgo.com");
+
         solicitud.setFecha_cubridora(LocalDate.parse("2022-09-20"));
-        solicitud.setFecha_emision(LocalDate.parse("2022-09-20"));
         solicitud.setRut_empleado("20.580.291-6");
         ArrayList<JustificativoEntity> justificados = new ArrayList<>();
         marca.setFecha(LocalDate.parse("2022-09-20"));
@@ -665,9 +644,7 @@ public class SueldoServiceTest {
         empleado.setCategoria("A");
         empleado.setFecha_in(LocalDate.parse("2010-09-09"));
         empleado.setFecha_nac(LocalDate.parse("1980-03-02"));
-        solicitud.setCorreo_jefatura("empresa@muebesstgo.com");
         solicitud.setFecha_cubridora(LocalDate.parse("2022-09-20"));
-        solicitud.setFecha_emision(LocalDate.parse("2022-09-20"));
         solicitud.setRut_empleado("20.580.291-6");
         ArrayList<JustificativoEntity> justificados = new ArrayList<>();
         marca.setFecha(LocalDate.parse("2022-09-20"));

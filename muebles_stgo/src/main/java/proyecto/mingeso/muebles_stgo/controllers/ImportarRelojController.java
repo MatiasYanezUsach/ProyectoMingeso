@@ -23,7 +23,7 @@ public class ImportarRelojController {
 
     @GetMapping("/")
     public String Reloj() {
-        return "reloj";
+        return "Home";
     }
 
     @PostMapping("/importar")

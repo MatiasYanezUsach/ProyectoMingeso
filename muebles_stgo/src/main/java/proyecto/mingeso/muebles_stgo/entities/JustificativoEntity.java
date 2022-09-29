@@ -18,11 +18,6 @@ public class JustificativoEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_justificativo", nullable = false)
     private Long id_justificativo;
-    private String empresa_emisora;
-    private String firma;
-    private String motivo;
-    @JsonFormat(pattern="yyyy/MM/dd")
-    private LocalDate fecha_emision;
     @JsonFormat(pattern="yyyy/MM/dd")
     private LocalDate fecha_cubridora;
     private String rut_empleado;

@@ -13,8 +13,4 @@ public class SolicitudService {
     public SolicitudEntity guardarSolicitud(SolicitudEntity solicitud){
         return solicitudRepository.save(solicitud);
     }
-    public SolicitudEntity crearSolicitud(SolicitudEntity solicitud){
-        SolicitudEntity nuevaSolicitud = solicitudRepository.save(new SolicitudEntity(solicitud.getId_solicitud(), solicitud.getCorreo_jefatura(), solicitud.getFecha_emision(), solicitud.getFecha_cubridora(), solicitud.getRut_empleado()));
-        return guardarSolicitud(nuevaSolicitud);
-    }
 }
