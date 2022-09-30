@@ -186,7 +186,7 @@ public class SueldoService {
        marcasPorDiaEnElMes = Math.ceil(marcasPorDiaEnElMes/2);
        for(int i = 0; i < cantidadJustificativos; i++) {
            for(int j = 0; j < cantidadMarcas; j++){
-               if(registroJustificados.get(i).getFecha_cubridora().equals(registroHoras.get(j).getFecha()) && registroHoras.get(j).getHora().getHour() < 18){
+               if(registroJustificados.get(i).getFecha_cubridora().equals(registroHoras.get(j).getFecha()) && registroHoras.get(j).getHora().getHour() < 18 && registroHoras.get(j).getHora().getHour() > 9){
                    montoPorAtraso = montoPorAtraso - (sueldoMensual * 0.15);
                    reservaJustivicativos = reservaJustivicativos -1;
                }
@@ -221,25 +221,34 @@ public class SueldoService {
         double cotizacionPrevisional = calcularCotizacionPrevisional(empleado,registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes);
         return (sueldoBruto-cotizacionPrevisional)-cotizacionPlanSalud;
     }
-    public void crearSueldoEmpleado (SueldoEntity sueldo, EmpleadoEntity empleado){
+    public SueldoEntity crearSueldoEmpleado (EmpleadoEntity empleado){
         double marcasPorDiaEnElMes = ((double) diasHabiles(inicioMes,finMes)) * 2;
         ArrayList<SolicitudEntity> registroSolicitudes = solicitudRepository.findByRut(empleado.getRut());
         ArrayList<RelojEntity> registroHoras = relojRepository.findByRut(empleado.getRut());
         ArrayList<JustificativoEntity> registroJustificados = justificativoRepository.findByRut(empleado.getRut());
-        sueldoRepository.save(new SueldoEntity(sueldo.getId_sueldo(), empleado.getRut(), nombreCompletoEmpleado(empleado), empleado.getCategoria(), calcularAniosServicio(empleado), calcularSueldoFijoMensual(empleado), montoBonificacionAniosServicio(empleado), montoPagoHorasExtras(empleado, registroSolicitudes, registroHoras), montoDescuentosAtrasos(empleado,registroJustificados,registroHoras,marcasPorDiaEnElMes), calcularSueldoBruto(empleado,registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes), calcularCotizacionPrevisional(empleado,registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes), calcularCotizacionPlanSalud(empleado,registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes), calcularSueldoFinal(empleado,registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes)));
+        SueldoEntity nuevoSueldo = new SueldoEntity();
+        nuevoSueldo.setRut(empleado.getRut());
+        nuevoSueldo.setNombre_empleado(nombreCompletoEmpleado(empleado));
+        nuevoSueldo.setCategoria(empleado.getCategoria());
+        nuevoSueldo.setAnios_servicio(calcularAniosServicio(empleado));
+        nuevoSueldo.setSueldo_fijo_mensual(calcularSueldoFijoMensual(empleado));
+        nuevoSueldo.setMonto_bonificacion_anios_servicio(montoBonificacionAniosServicio(empleado));
+        nuevoSueldo.setMonto_pago_horas_extras(montoPagoHorasExtras(empleado, registroSolicitudes, registroHoras));
+        nuevoSueldo.setMonto_descuentos(montoDescuentosAtrasos(empleado,registroJustificados,registroHoras,marcasPorDiaEnElMes));
+        nuevoSueldo.setSueldo_bruto(calcularSueldoBruto(empleado,registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes));
+        nuevoSueldo.setCotizacion_previsional(calcularCotizacionPrevisional(empleado,registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes));
+        nuevoSueldo.setCotizacion_salud(calcularCotizacionPlanSalud(empleado,registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes));
+        nuevoSueldo.setMonto_sueldo_final(calcularSueldoFinal(empleado,registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes));
+        return nuevoSueldo;
     }
     public void sueldosGenerales (ArrayList<EmpleadoEntity> empleados){
         int cantidadEmpleados = 0;
         for(EmpleadoEntity cantEmpleados : empleados) {
             cantidadEmpleados++;
         }
-        double marcasPorDiaEnElMes = ((double) diasHabiles(inicioMes,finMes)) * 2;
-        ArrayList<SolicitudEntity> registroSolicitudes = solicitudRepository.findByRut(empleados.get(0).getRut());
-        ArrayList<RelojEntity> registroHoras = relojRepository.findByRut(empleados.get(0).getRut());
-        ArrayList<JustificativoEntity> registroJustificados = justificativoRepository.findByRut(empleados.get(0).getRut());
-        SueldoEntity nuevoSueldo = sueldoRepository.save(new SueldoEntity(1L, empleados.get(0).getRut(),nombreCompletoEmpleado(empleados.get(0)),empleados.get(0).getCategoria(),calcularAniosServicio(empleados.get(0)),calcularSueldoFijoMensual(empleados.get(0)),montoBonificacionAniosServicio(empleados.get(0)),montoPagoHorasExtras(empleados.get(0),registroSolicitudes,registroHoras),montoDescuentosAtrasos(empleados.get(0),registroJustificados ,registroHoras, marcasPorDiaEnElMes),calcularSueldoBruto(empleados.get(0),registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes),calcularCotizacionPrevisional(empleados.get(0),registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes),calcularCotizacionPlanSalud(empleados.get(0),registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes),calcularSueldoFinal(empleados.get(0),registroSolicitudes,registroHoras,registroJustificados,marcasPorDiaEnElMes)));
-        for(int i = 1; i < cantidadEmpleados; i++){
-            crearSueldoEmpleado(nuevoSueldo, empleados.get(i));
+        for(int i = 0; i < cantidadEmpleados; i++){
+            SueldoEntity nuevoSueldo = crearSueldoEmpleado(empleados.get(i));
+            sueldoRepository.save(nuevoSueldo);
         }
     }
     public ArrayList<SueldoEntity> obtenerPlanilla(){

@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Comprobacion de errores en las vistas">
-      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/Empleados.html" afterDir="false" />
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Nuevas modificaciones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/EmpleadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/JustificativoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/JustificativoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SolicitudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SolicitudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SueldoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SueldoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/SueldoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/SueldoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/EmpleadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/EmpleadoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/Home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empleado.sql" beforeDir="false" afterPath="$PROJECT_DIR$/empleado.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importaciones/DATOS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/importaciones/DATOS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/justificativos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/justificativos.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SueldoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SueldoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solicitudes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/solicitudes.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +180,9 @@
       <workItem from="1664405440703" duration="3797000" />
       <workItem from="1664410621073" duration="3494000" />
       <workItem from="1664485697260" duration="10770000" />
-      <workItem from="1664502233979" duration="3532000" />
+      <workItem from="1664502233979" duration="3760000" />
+      <workItem from="1664513069821" duration="1244000" />
+      <workItem from="1664575678507" duration="1946000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -249,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664498565871</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Nuevas modificaciones">
+      <created>1664507272111</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664507272112</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +281,8 @@
     <MESSAGE value="avance vista planilla de sueldos" />
     <MESSAGE value="Mejoras en las vistas" />
     <MESSAGE value="Comprobacion de errores en las vistas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comprobacion de errores en las vistas" />
+    <MESSAGE value="Nuevas modificaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nuevas modificaciones" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
