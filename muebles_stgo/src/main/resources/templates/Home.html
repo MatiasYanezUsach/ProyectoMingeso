@@ -11,7 +11,7 @@
             integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
             crossorigin="anonymous">
 
-    <title>Archivos</title>
+    <title>MueblesStgo</title>
 </head>
 <body>
 <section class="vh-1000" style="background-color: #508bfc;">
@@ -25,7 +25,7 @@
                             <input type="file" class="form-control" name="archivos"><br>
                             <h5><input type="submit" value="Cargar"></h5>
                         </form>
-                        <h3 th:text="${mensaje}"></h3>
+                        <h3 th:text="${mensaje}" style="color: red"></h3>
                     </div>
                     <div class="card-body text-center">
                         <h3>Subir Justificativo</h3>
@@ -38,6 +38,7 @@
                             <input type="text" class="form-control" name="fecha" placeholder="YYYY-MM-DD"><br>
                             <h5 class="text-center"><input type="submit" value="Subir"></h5>
                         </form>
+                        <h3 th:text="${mensaje2}" style="color: red"></h3>
                     </div>
                     <div class="card-body text-center" >
                         <h3>Subir Solicitud</h3>
@@ -50,6 +51,7 @@
                             <input type="text" class="form-control" name="fecha" placeholder="YYYY-MM-DD"><br>
                             <h5 class="text-center"><input type="submit" value="Subir"></h5>
                         </form>
+                        <h3 th:text="${mensaje3}" style="color: red"></h3>
                     </div>
                     <div class="card-body text-center" >
                         <h3>Planilla de sueldos</h3>
