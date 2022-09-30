@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Mejoras en las vistas">
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Comprobacion de errores en las vistas">
+      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/Empleados.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/EmpleadoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/JustificativoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/JustificativoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SolicitudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SolicitudController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/EmpleadoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/EmpleadoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SueldoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/controllers/SueldoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/SueldoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/repositories/SueldoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/EmpleadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/EmpleadoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/resources/templates/Home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +183,8 @@
       <workItem from="1664405216759" duration="184000" />
       <workItem from="1664405440703" duration="3797000" />
       <workItem from="1664410621073" duration="3494000" />
-      <workItem from="1664485697260" duration="10388000" />
+      <workItem from="1664485697260" duration="10770000" />
+      <workItem from="1664502233979" duration="3532000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -236,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664495415740</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Comprobacion de errores en las vistas">
+      <created>1664498565871</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664498565871</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +275,8 @@
     <MESSAGE value="modificaciones vistas" />
     <MESSAGE value="avance vista planilla de sueldos" />
     <MESSAGE value="Mejoras en las vistas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mejoras en las vistas" />
+    <MESSAGE value="Comprobacion de errores en las vistas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comprobacion de errores en las vistas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
