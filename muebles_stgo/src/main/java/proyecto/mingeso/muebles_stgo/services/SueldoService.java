@@ -186,7 +186,7 @@ public class SueldoService {
        marcasPorDiaEnElMes = Math.ceil(marcasPorDiaEnElMes/2);
        for(int i = 0; i < cantidadJustificativos; i++) {
            for(int j = 0; j < cantidadMarcas; j++){
-               if(registroJustificados.get(i).getFecha_cubridora().equals(registroHoras.get(j).getFecha()) && registroHoras.get(j).getHora().getHour() < 18 && registroHoras.get(j).getHora().getHour() > 9){
+               if(registroJustificados.get(i).getFecha_cubridora().equals(registroHoras.get(j).getFecha()) && registroHoras.get(j).getHora().getHour() < 18 && registroHoras.get(j).getHora().getHour() >= 9){
                    montoPorAtraso = montoPorAtraso - (sueldoMensual * 0.15);
                    reservaJustivicativos = reservaJustivicativos -1;
                }

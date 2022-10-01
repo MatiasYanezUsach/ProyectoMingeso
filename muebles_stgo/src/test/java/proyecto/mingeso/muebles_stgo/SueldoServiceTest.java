@@ -22,11 +22,18 @@ public class SueldoServiceTest {
     JustificativoEntity justificativo = new JustificativoEntity();
 
     @Test
-    void diasHabiles(){
+    void diasHabilesSeptiembre(){
         LocalDate inicioMes = LocalDate.parse("2022-09-01");
         LocalDate finMes = LocalDate.parse("2022-09-30");
         long diasHabiles = sueldoService.diasHabiles(inicioMes, finMes);
         assertEquals(22, diasHabiles,0);
+    }
+    @Test
+    void diasHabilesOctubre(){
+        LocalDate inicioMes = LocalDate.parse("2022-10-01");
+        LocalDate finMes = LocalDate.parse("2022-10-31");
+        long diasHabiles = sueldoService.diasHabiles(inicioMes, finMes);
+        assertEquals(21, diasHabiles,0);
     }
 
     @Test
@@ -662,4 +669,3 @@ public class SueldoServiceTest {
         assertEquals(1462880,sueldoFinal,0);
     }
 }
-

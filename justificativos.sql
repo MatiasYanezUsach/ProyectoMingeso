@@ -11,3 +11,4 @@ insert into justificativos (rut_empleado, fecha_cubridora) values ('13.198.194-9
 insert into justificativos (rut_empleado, fecha_cubridora) values ('13.198.194-9','2022-09-19');
 insert into justificativos (rut_empleado, fecha_cubridora) values ('15.447.346-3','2022-09-20');
 insert into justificativos (rut_empleado, fecha_cubridora) values ('13.009.202-2','2022-09-21');
+insert into justificativos (rut_empleado, fecha_cubridora) values ('20.580.291-6','2022-09-30');

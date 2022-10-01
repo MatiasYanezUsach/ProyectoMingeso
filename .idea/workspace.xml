@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Nuevas modificaciones">
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Nuevas modificaciones en la generacion de la planilla">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empleado.sql" beforeDir="false" afterPath="$PROJECT_DIR$/empleado.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/importaciones/DATOS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/importaciones/DATOS.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/justificativos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/justificativos.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SueldoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SueldoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solicitudes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/solicitudes.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/test/java/proyecto/mingeso/muebles_stgo/SueldoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/test/java/proyecto/mingeso/muebles_stgo/SueldoServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
     &quot;spring.configuration.checksum&quot;: &quot;8a66a5ad66fa01a397030ca467e247dc&quot;
   }
 }</component>
-  <component name="RunManager" selected="Spring Boot.MueblesStgoApplication">
+  <component name="RunManager" selected="JUnit.SueldoServiceTest.diasHabilesOctubre">
     <configuration name="SueldoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="muebles_stgo" />
       <extension name="coverage">
@@ -101,6 +100,38 @@
       <option name="PACKAGE_NAME" value="proyecto.mingeso.muebles_stgo" />
       <option name="MAIN_CLASS_NAME" value="proyecto.mingeso.muebles_stgo.SueldoServiceTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SueldoServiceTest.diasHabilesOctubre" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="muebles_stgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="proyecto.mingeso.muebles_stgo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="proyecto.mingeso.muebles_stgo" />
+      <option name="MAIN_CLASS_NAME" value="proyecto.mingeso.muebles_stgo.SueldoServiceTest" />
+      <option name="METHOD_NAME" value="diasHabilesOctubre" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SueldoServiceTest.montoDescuentoAtraso71minutosConJustificativo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="muebles_stgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="proyecto.mingeso.muebles_stgo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="proyecto.mingeso.muebles_stgo" />
+      <option name="MAIN_CLASS_NAME" value="proyecto.mingeso.muebles_stgo.SueldoServiceTest" />
+      <option name="METHOD_NAME" value="montoDescuentoAtraso71minutosConJustificativo" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,8 +151,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.MueblesStgoApplication" />
+        <item itemvalue="JUnit.SueldoServiceTest.diasHabilesOctubre" />
         <item itemvalue="JUnit.SueldoServiceTest" />
+        <item itemvalue="JUnit.SueldoServiceTest.montoDescuentoAtraso71minutosConJustificativo" />
+        <item itemvalue="Spring Boot.MueblesStgoApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +215,7 @@
       <workItem from="1664485697260" duration="10770000" />
       <workItem from="1664502233979" duration="3760000" />
       <workItem from="1664513069821" duration="1244000" />
-      <workItem from="1664575678507" duration="1946000" />
+      <workItem from="1664575678507" duration="5000000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -254,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664507272112</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Nuevas modificaciones en la generacion de la planilla">
+      <created>1664578319386</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664578319386</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +322,8 @@
     <MESSAGE value="Mejoras en las vistas" />
     <MESSAGE value="Comprobacion de errores en las vistas" />
     <MESSAGE value="Nuevas modificaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nuevas modificaciones" />
+    <MESSAGE value="Nuevas modificaciones en la generacion de la planilla" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nuevas modificaciones en la generacion de la planilla" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
