@@ -25,7 +25,7 @@ public class SueldoService {
     EmpleadoRepository empleadoRepository;
 
     int findeMes = Calendar.getInstance().getActualMaximum(Calendar.DAY_OF_MONTH);
-    int mesActual = Calendar.getInstance().get(Calendar.MONTH);
+    int mesActual = Calendar.getInstance().get(Calendar.MONTH)+1;
     int anioActual = Calendar.getInstance().get(Calendar.YEAR);
     LocalDate inicioMes = LocalDate.of(anioActual, mesActual, 1);
     LocalDate finMes = LocalDate.of(anioActual,mesActual, findeMes);
