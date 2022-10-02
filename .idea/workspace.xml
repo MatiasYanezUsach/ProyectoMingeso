@@ -91,7 +91,7 @@
       <recent name="C:\Users\mfym2\Desktop\ProyectoMingeso\muebles_stgo\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.MueblesStgoApplication">
+  <component name="RunManager" selected="JUnit.SueldoServiceTest">
     <configuration name="ImportarRelojServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="muebles_stgo" />
       <extension name="coverage">
@@ -103,22 +103,6 @@
       <option name="PACKAGE_NAME" value="proyecto.mingeso.muebles_stgo" />
       <option name="MAIN_CLASS_NAME" value="proyecto.mingeso.muebles_stgo.ImportarRelojServiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImportarRelojServiceTest.importarArchivo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="muebles_stgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="proyecto.mingeso.muebles_stgo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="proyecto.mingeso.muebles_stgo" />
-      <option name="MAIN_CLASS_NAME" value="proyecto.mingeso.muebles_stgo.ImportarRelojServiceTest" />
-      <option name="METHOD_NAME" value="importarArchivo" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,6 +139,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SueldoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="muebles_stgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="proyecto.mingeso.muebles_stgo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="proyecto.mingeso.muebles_stgo" />
+      <option name="MAIN_CLASS_NAME" value="proyecto.mingeso.muebles_stgo.SueldoServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="proyecto.mingeso.muebles_stgo in muebles_stgo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="muebles_stgo" />
       <extension name="coverage">
@@ -178,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SueldoServiceTest" />
         <item itemvalue="JUnit.proyecto.mingeso.muebles_stgo in muebles_stgo" />
         <item itemvalue="JUnit.ImportarRelojServiceTest" />
         <item itemvalue="JUnit.ImportarRelojServiceTest.importarArchivoConContenidodeNombreDATOStxt" />
         <item itemvalue="JUnit.ImportarRelojServiceTest.importarArchivoConContenido" />
-        <item itemvalue="JUnit.ImportarRelojServiceTest.importarArchivo" />
       </list>
     </recent_temporary>
   </component>
