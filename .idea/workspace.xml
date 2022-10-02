@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="avance en la creacion de los Tests">
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Implementacion .jar y dockerfile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +30,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/entities/EmpleadoEntity.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/SueldoService.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/muebles_stgo/src/test/java/proyecto/mingeso/muebles_stgo/SueldoServiceTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -252,6 +251,10 @@
       <workItem from="1664674311740" duration="2287000" />
       <workItem from="1664676692024" duration="6763000" />
       <workItem from="1664738575186" duration="586000" />
+      <workItem from="1664739289787" duration="317000" />
+      <workItem from="1664740313014" duration="86000" />
+      <workItem from="1664740465619" duration="56000" />
+      <workItem from="1664740644706" duration="129000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -351,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664674145686</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Se borran temporalmente los tests para la implementacion de docker y jenkins">
+      <created>1664739576004</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1664739576004</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +392,8 @@
     <MESSAGE value="Nuevas modificaciones en la generacion de la planilla" />
     <MESSAGE value="fix errores" />
     <MESSAGE value="avance en la creacion de los Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="avance en la creacion de los Tests" />
+    <MESSAGE value="Se borran temporalmente los tests para la implementacion de docker y jenkins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se borran temporalmente los tests para la implementacion de docker y jenkins" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
