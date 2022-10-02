@@ -6,7 +6,6 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import proyecto.mingeso.muebles_stgo.entities.SolicitudEntity;
-import proyecto.mingeso.muebles_stgo.repositories.JustificativoRepository;
 import proyecto.mingeso.muebles_stgo.repositories.SolicitudRepository;
 import proyecto.mingeso.muebles_stgo.services.SolicitudService;
 
