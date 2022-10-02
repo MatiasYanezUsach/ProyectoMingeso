@@ -603,7 +603,6 @@ public class SueldoServiceTest {
         empleado.setCategoria("A");
         empleado.setFecha_in(LocalDate.parse("2010-09-09"));
         empleado.setFecha_nac(LocalDate.parse("1980-03-02"));
-
         solicitud.setFecha_cubridora(LocalDate.parse("2022-09-20"));
         solicitud.setRut_empleado("20.580.291-6");
         ArrayList<JustificativoEntity> justificados = new ArrayList<>();

@@ -22,6 +22,14 @@ public class RelojService {
     @Autowired
     RelojRepository relojRepository;
 
+    public RelojEntity crearMarca(String rut_empleado, LocalDate fecha, LocalTime hora){
+        RelojEntity nuevaMarca = new RelojEntity();
+        nuevaMarca.setRut_empleado(rut_empleado);
+        nuevaMarca.setHora(hora);
+        nuevaMarca.setFecha(fecha);
+        return nuevaMarca;
+    }
+
     public ArrayList<RelojEntity> obtenerMarcas(){
         return (ArrayList<RelojEntity>) relojRepository.findAll();
     }

@@ -29,7 +29,7 @@ public class ImportarRelojController {
     @PostMapping("/importar")
     public String importarArchivos( @RequestParam("archivos") MultipartFile file, RedirectAttributes ms) {
         String nombreArchivo= file.getOriginalFilename();
-        if (Objects.equals(nombreArchivo, "DATOS.txt")) {
+        if (Objects.equals(nombreArchivo, "DATOS.txt") ||Objects.equals(nombreArchivo, "DATA.txt") ) {
             relojService.lectura(importarRelojService.save(file));
             ms.addFlashAttribute("mensaje", "Archivo importado correctamente");
         }
