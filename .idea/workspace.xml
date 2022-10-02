@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="avance en la creacion de los Tests">
-      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/test/java/proyecto/mingeso/muebles_stgo/EmpleadoServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/muebles_stgo/src/test/java/proyecto/mingeso/muebles_stgo/ImportarRelojServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/RelojService.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/main/java/proyecto/mingeso/muebles_stgo/services/RelojService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/test/java/proyecto/mingeso/muebles_stgo/RelojServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/test/java/proyecto/mingeso/muebles_stgo/RelojServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muebles_stgo/src/test/java/proyecto/mingeso/muebles_stgo/SolicitudServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/muebles_stgo/src/test/java/proyecto/mingeso/muebles_stgo/SolicitudServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +92,7 @@
       <recent name="C:\Users\mfym2\Desktop\ProyectoMingeso\muebles_stgo\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.proyecto.mingeso.muebles_stgo in muebles_stgo">
+  <component name="RunManager" selected="Spring Boot.MueblesStgoApplication">
     <configuration name="ImportarRelojServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="muebles_stgo" />
       <extension name="coverage">
@@ -171,6 +166,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="proyecto.mingeso.muebles_stgo" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MueblesStgoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="muebles_stgo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="proyecto.mingeso.muebles_stgo.MueblesStgoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -249,6 +251,7 @@
       <workItem from="1664652086211" duration="20720000" />
       <workItem from="1664674311740" duration="2287000" />
       <workItem from="1664676692024" duration="6763000" />
+      <workItem from="1664738575186" duration="586000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
