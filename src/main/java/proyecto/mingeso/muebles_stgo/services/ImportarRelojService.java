@@ -17,7 +17,7 @@ public class ImportarRelojService {
         if (!file.isEmpty()) {
             try {
                 byte [] bytes= file.getBytes();
-                String folder = "importaciones//";
+                String folder = "importaciones/";
                 Path path = Paths.get( folder +file.getOriginalFilename() );
                 System.out.println(path.toAbsolutePath());
                 Files.write(path, bytes);

@@ -5,24 +5,27 @@ services:
     restart: always
     volumes:
       - mysql-data:/var/lib/mysql
+      - myapp:/importaciones
     environment:
       MYSQL_ROOT_PASSWORD: Chile&2022
-      MYSQL_DATABASE: mueblesstgo_app
+      MYSQL_DATABASE: bd
     ports:
       - 3307:3306
   mueblesstgo_app:
-    container_name: mueblesstgo_app
+    container_name: app-web-simple
     image: matiasusach/mueblesstgo_app
     ports:
       - "8080:8080"
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/mueblesstgo_app
-      - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=Chile&2022
+      - DB_URL=jdbc:mysql://mysql-db:3306/bd
+      - DB_USERNAME=root
+      - DB_PASSWORD=Chile&2022
     deploy:
       restart_policy:
         condition: on-failure
     depends_on:
       - mysql-db
 volumes:
+  myapp:
+    external: true
   mysql-data:

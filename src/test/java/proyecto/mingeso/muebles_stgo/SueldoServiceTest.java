@@ -1,20 +1,29 @@
 package proyecto.mingeso.muebles_stgo;
 
 import org.junit.jupiter.api.Test;
-import proyecto.mingeso.muebles_stgo.entities.EmpleadoEntity;
-import proyecto.mingeso.muebles_stgo.entities.JustificativoEntity;
-import proyecto.mingeso.muebles_stgo.entities.RelojEntity;
-import proyecto.mingeso.muebles_stgo.entities.SolicitudEntity;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import proyecto.mingeso.muebles_stgo.entities.*;
+import proyecto.mingeso.muebles_stgo.repositories.SueldoRepository;
 import proyecto.mingeso.muebles_stgo.services.SueldoService;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 
+@ExtendWith(MockitoExtension.class)
 public class SueldoServiceTest {
-    SueldoService sueldoService = new SueldoService();
+    @Mock
+    private SueldoRepository sueldoRepository;
+    @InjectMocks
+    SueldoService sueldoService;
     EmpleadoEntity empleado = new EmpleadoEntity();
     SolicitudEntity solicitud = new SolicitudEntity();
     RelojEntity marca = new RelojEntity();
@@ -666,5 +675,27 @@ public class SueldoServiceTest {
         solicitudes.add(solicitud);
         double sueldoFinal = sueldoService.calcularSueldoFinal(empleado,solicitudes,marcas,justificados,2);
         assertEquals(1462880,sueldoFinal,0);
+    }
+    @Test
+    void obtenerPlanilla() {
+        SueldoEntity sueldo = new SueldoEntity();
+        ArrayList<SueldoEntity> sueldos = new ArrayList<>();
+        sueldo.setRut("20.580.291-6");
+        sueldo.setCategoria("A");
+        sueldo.setSueldo_bruto(1700000);
+        sueldo.setMonto_sueldo_final(1530000);
+        sueldo.setCotizacion_previsional(170000);
+        sueldo.setCotizacion_salud(136000);
+        sueldo.setAnios_servicio(0);
+        sueldo.setMonto_bonificacion_anios_servicio(0);
+        sueldo.setSueldo_fijo_mensual(1700000);
+        sueldo.setMonto_descuentos(0);
+        sueldo.setMonto_pago_horas_extras(0);
+        sueldo.setNombre_empleado("Yanez Matias");
+        sueldos.add(sueldo);
+        when (sueldoRepository.save(any(SueldoEntity.class))).thenReturn(sueldo);
+        SueldoEntity sueldoFinal = sueldoRepository.save(sueldo);
+        when (sueldoRepository.findAll()).thenReturn(sueldos);
+        assertThat(sueldoService.obtenerPlanilla()).isEqualTo(sueldos);
     }
 }
