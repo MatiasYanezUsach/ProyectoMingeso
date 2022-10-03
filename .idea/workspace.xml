@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="regresamos los test anteriormente creados">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Docker compose">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +278,7 @@
       <workItem from="1664746188377" duration="365000" />
       <workItem from="1664749161186" duration="149000" />
       <workItem from="1664749794250" duration="447000" />
-      <workItem from="1664750608016" duration="4081000" />
+      <workItem from="1664750608016" duration="4874000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -415,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664750016066</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Docker compose">
+      <created>1664755873819</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1664755873819</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +456,8 @@
     <MESSAGE value="Reorganizacion de los packages" />
     <MESSAGE value="jenkinsfile" />
     <MESSAGE value="regresamos los test anteriormente creados" />
-    <option name="LAST_COMMIT_MESSAGE" value="regresamos los test anteriormente creados" />
+    <MESSAGE value="Docker compose" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker compose" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
