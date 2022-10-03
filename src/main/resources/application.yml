@@ -14,6 +14,6 @@ Spring:
     url: jdbc:mysql://localhost:3307/mueblesstgo_app
     username: root
     password: Chile&2022
-    #url: ${DB_URL}
-    #username: ${DB_USERNAME}
-    #password=: ${DB_PASSWORD}
+    #url=${DB_URL}
+    #username=${DB_USERNAME}
+    #password=${DB_PASSWORD}

@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="fixes X3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,7 +277,7 @@
       <workItem from="1664763609183" duration="8889000" />
       <workItem from="1664773104254" duration="3049000" />
       <workItem from="1664777307816" duration="298000" />
-      <workItem from="1664778039337" duration="3171000" />
+      <workItem from="1664778039337" duration="4012000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -459,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664780303327</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fixes X3">
+      <created>1664781368873</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1664781368873</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
