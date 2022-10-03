@@ -7,14 +7,14 @@ services:
       - mysql-data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: Chile&2022
-      MYSQL_DATABASE: bd
+      MYSQL_DATABASE: mueblesstgo_app
     ports:
       - 3307:3306
   mueblesstgo_app:
     container_name: app-web-simple
     image: matiasusach/mueblesstgo_app
     ports:
-      - "8080:8080"
+      - "8090:8090"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/mueblesstgo_app
       - SPRING_DATASOURCE_USERNAME=root
