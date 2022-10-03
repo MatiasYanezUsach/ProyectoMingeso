@@ -16,9 +16,9 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - DB_URL=jdbc:mysql://mysql-db:3306/mueblesstgo_app
-      - DB_USERNAME=root
-      - DB_PASSWORD=Chile&2022
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-db:3306/mueblesstgo_app
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=Chile&2022
     deploy:
       restart_policy:
         condition: on-failure
