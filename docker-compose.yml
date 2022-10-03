@@ -16,7 +16,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - DB_URL=jdbc:mysql://mysql-db:3306/bd?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
+      - DB_URL=jdbc:mysql://mysql-db:3306/bd
       - DB_USERNAME=root
       - DB_PASSWORD=Chile&2022
     deploy:
