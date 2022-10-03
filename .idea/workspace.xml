@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="fix docker file" />
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="fixes">
+      <change afterPath="$PROJECT_DIR$/importaciones/Test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/mingeso/muebles_stgo/services/RelojService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/mingeso/muebles_stgo/services/RelojService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/EmpleadoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/EmpleadoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/ImportarRelojServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/ImportarRelojServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/JustificativoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/JustificativoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/RelojServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/RelojServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/SolicitudServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/SolicitudServiceTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,25 +72,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/mfym2/Desktop/Proyecto fingeso",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
-    "spring.configuration.checksum": "5b0f6e76bdf74e41178a3ac72c9e62cf"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mfym2/Desktop/Proyecto fingeso&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5b0f6e76bdf74e41178a3ac72c9e62cf&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mfym2\Desktop\ProyectoMingeso\muebles_stgo\src\test\resources" />
@@ -94,9 +103,9 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker_compose.yml: Compose Deployment">
+  <component name="RunManager" selected="JUnit.proyecto.mingeso.muebles_stgo in ProyectoMingeso">
     <configuration name="ImportarRelojServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="muebles_stgo" />
+      <module name="ProyectoMingeso" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="proyecto.mingeso.muebles_stgo.*" />
@@ -110,7 +119,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SueldoServiceTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RelojServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProyectoMingeso" />
       <extension name="coverage">
         <pattern>
@@ -119,14 +128,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="proyecto.mingeso.muebles_stgo" />
-      <option name="MAIN_CLASS_NAME" value="proyecto.mingeso.muebles_stgo.SueldoServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="proyecto.mingeso.muebles_stgo.RelojServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SueldoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="muebles_stgo" />
+    <configuration name="RelojServiceTest.lecturaArchivoVacio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoMingeso" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="proyecto.mingeso.muebles_stgo.*" />
@@ -134,7 +143,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="proyecto.mingeso.muebles_stgo" />
-      <option name="MAIN_CLASS_NAME" value="proyecto.mingeso.muebles_stgo.SueldoServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="proyecto.mingeso.muebles_stgo.RelojServiceTest" />
+      <option name="METHOD_NAME" value="lecturaArchivoVacio" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolicitudServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoMingeso" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="proyecto.mingeso.muebles_stgo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="proyecto.mingeso.muebles_stgo" />
+      <option name="MAIN_CLASS_NAME" value="proyecto.mingeso.muebles_stgo.SolicitudServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,20 +179,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="proyecto.mingeso.muebles_stgo in muebles_stgo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="muebles_stgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="proyecto.mingeso.muebles_stgo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="proyecto.mingeso.muebles_stgo" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MueblesStgoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ProyectoMingeso" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="proyecto.mingeso.muebles_stgo.MueblesStgoApplication" />
@@ -175,31 +186,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="docker_compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="envFilePath" value="" />
-          <option name="sourceFilePath" value="docker_compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.docker_compose.yml: Compose Deployment" />
+      <item itemvalue="JUnit.RelojServiceTest" />
+      <item itemvalue="JUnit.RelojServiceTest.lecturaArchivoVacio" />
+      <item itemvalue="JUnit.SolicitudServiceTest" />
       <item itemvalue="JUnit.ImportarRelojServiceTest" />
-      <item itemvalue="JUnit.proyecto.mingeso.muebles_stgo in muebles_stgo" />
       <item itemvalue="JUnit.proyecto.mingeso.muebles_stgo in ProyectoMingeso" />
-      <item itemvalue="JUnit.SueldoServiceTest" />
-      <item itemvalue="JUnit.SueldoServiceTest (1)" />
       <item itemvalue="Spring Boot.MueblesStgoApplication (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker_compose.yml: Compose Deployment" />
         <item itemvalue="JUnit.proyecto.mingeso.muebles_stgo in ProyectoMingeso" />
-        <item itemvalue="JUnit.SueldoServiceTest (1)" />
-        <item itemvalue="JUnit.SueldoServiceTest" />
-        <item itemvalue="JUnit.proyecto.mingeso.muebles_stgo in muebles_stgo" />
+        <item itemvalue="JUnit.SolicitudServiceTest" />
+        <item itemvalue="JUnit.RelojServiceTest" />
+        <item itemvalue="JUnit.RelojServiceTest.lecturaArchivoVacio" />
+        <item itemvalue="JUnit.ImportarRelojServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -277,6 +278,8 @@
       <workItem from="1664749161186" duration="149000" />
       <workItem from="1664749794250" duration="447000" />
       <workItem from="1664750608016" duration="5535000" />
+      <workItem from="1664759617489" duration="1114000" />
+      <workItem from="1664763609183" duration="8569000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -425,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664756960437</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fixes">
+      <created>1664759936394</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1664759936394</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +473,8 @@
     <MESSAGE value="regresamos los test anteriormente creados" />
     <MESSAGE value="Docker compose" />
     <MESSAGE value="fix docker file" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix docker file" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -494,6 +505,9 @@
       <FILTER>proyecto.mingeso.muebles_stgo.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/ProyectoMingeso$MueblesStgoApplicationTests.ic" NAME="MueblesStgoApplicationTests Coverage Results" MODIFIED="1664673758893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>proyecto.mingeso.muebles_stgo.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ProyectoMingeso$proyecto_mingeso_muebles_stgo_in_ProyectoMingeso.ic" NAME="proyecto.mingeso.muebles_stgo in ProyectoMingeso Coverage Results" MODIFIED="1664772190565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>proyecto.mingeso.muebles_stgo.*</FILTER>
     </SUITE>
   </component>

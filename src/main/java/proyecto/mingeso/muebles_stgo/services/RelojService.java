@@ -32,10 +32,10 @@ public class RelojService {
     public ArrayList<RelojEntity> obtenerMarcas(){
         return (ArrayList<RelojEntity>) relojRepository.findAll();
     }
-    public void guardarMarca(RelojEntity marca){
-        relojRepository.save(marca);
+    public RelojEntity guardarMarca(RelojEntity marca){
+        return relojRepository.save(marca);
     }
-    public void lectura(MultipartFile file){
+    public int lectura(MultipartFile file){
         LocalTime hora;
         LocalDate fecha;
         String linea,rut;
@@ -57,8 +57,10 @@ public class RelojService {
                 guardarMarca(nuevaMarca);
                 id_marca = id_marca + 1;
             }
+            return 1;
         } catch (IOException exception){
-            System.err.println(exception.getMessage());
+            System.err.println("el archivo ingresado, no esta previamente importado");
+            return 0;
         }
     }
 }

@@ -1,26 +1,27 @@
 package proyecto.mingeso.muebles_stgo;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import proyecto.mingeso.muebles_stgo.entities.EmpleadoEntity;
 import proyecto.mingeso.muebles_stgo.repositories.EmpleadoRepository;
+import proyecto.mingeso.muebles_stgo.services.EmpleadoService;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 
-@DataJpaTest
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@ExtendWith(MockitoExtension.class)
 public class EmpleadoServiceTest {
-    @Autowired
-    private TestEntityManager entityManager;
-    @Autowired
+    @Mock
     private EmpleadoRepository empleadoRepository;
-
+    @InjectMocks
+    EmpleadoService empleadoService;
     @Test
     void obtenerEmpleados() {
         EmpleadoEntity empleado = new EmpleadoEntity();
@@ -31,8 +32,11 @@ public class EmpleadoServiceTest {
         empleado.setApellidos("Yanez");
         empleado.setNombres("Matias");
         empleado.setFecha_in(LocalDate.parse("2018-09-20"));
+        empleado.setId_empleado(1L);
         empleados.add(empleado);
-        entityManager.persistAndFlush(empleado);
-        assertThat(empleadoRepository.findAll()).isEqualTo(empleados);
+        when (empleadoRepository.save(any(EmpleadoEntity.class))).thenReturn(empleado);
+        EmpleadoEntity empleadoFinal = empleadoRepository.save(empleado);
+        when (empleadoRepository.findAll()).thenReturn(empleados);
+        assertThat(empleadoService.obtenerEmpleados()).isEqualTo(empleados);
     }
 }
