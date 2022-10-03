@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="avances y fixes 2">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="avances y fixes 3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +280,8 @@
       <workItem from="1664778039337" duration="4831000" />
       <workItem from="1664803623658" duration="276000" />
       <workItem from="1664805108883" duration="480000" />
-      <workItem from="1664808989960" duration="6257000" />
+      <workItem from="1664808989960" duration="6422000" />
+      <workItem from="1664834790305" duration="35000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -491,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664815889349</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="avances y fixes 3">
+      <created>1664815959922</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1664815959922</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +519,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="CRUD justificativo finalizado sin comprobacion de errores" />
     <MESSAGE value="Implementacion vista Login" />
     <MESSAGE value="Implementacion vista SubirJustificativo" />
     <MESSAGE value="modificaciones vistas" />
@@ -535,7 +543,8 @@
     <MESSAGE value="fixes X5" />
     <MESSAGE value="avances y fixes" />
     <MESSAGE value="avances y fixes 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="avances y fixes 2" />
+    <MESSAGE value="avances y fixes 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="avances y fixes 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -568,7 +577,7 @@
     <SUITE FILE_PATH="coverage/ProyectoMingeso$MueblesStgoApplicationTests.ic" NAME="MueblesStgoApplicationTests Coverage Results" MODIFIED="1664673758893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>proyecto.mingeso.muebles_stgo.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/ProyectoMingeso$proyecto_mingeso_muebles_stgo_in_ProyectoMingeso.ic" NAME="proyecto.mingeso.muebles_stgo in ProyectoMingeso Coverage Results" MODIFIED="1664805182983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/ProyectoMingeso$proyecto_mingeso_muebles_stgo_in_ProyectoMingeso.ic" NAME="proyecto.mingeso.muebles_stgo in ProyectoMingeso Coverage Results" MODIFIED="1664816061278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>proyecto.mingeso.muebles_stgo.*</FILTER>
     </SUITE>
   </component>

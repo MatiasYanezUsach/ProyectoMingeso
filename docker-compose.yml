@@ -14,7 +14,7 @@ services:
     container_name: app-web-simple
     image: matiasusach/mueblesstgo_app
     ports:
-      - "8080:8080"
+      - "8090:8090"
     environment:
       - DB_URL=jdbc:mysql://mysql-db:3306/bd
       - DB_USERNAME=root
