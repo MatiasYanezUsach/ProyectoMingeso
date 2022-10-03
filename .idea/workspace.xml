@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="fixes">
-      <change afterPath="$PROJECT_DIR$/importaciones/Test.txt" afterDir="false" />
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="Modificaciones en los tests">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_10_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proyecto/mingeso/muebles_stgo/services/RelojService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proyecto/mingeso/muebles_stgo/services/RelojService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/EmpleadoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/EmpleadoServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/ImportarRelojServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/ImportarRelojServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/JustificativoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/JustificativoServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/RelojServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/RelojServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/SolicitudServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/proyecto/mingeso/muebles_stgo/SolicitudServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +283,10 @@
       <workItem from="1664749794250" duration="447000" />
       <workItem from="1664750608016" duration="5535000" />
       <workItem from="1664759617489" duration="1114000" />
-      <workItem from="1664763609183" duration="8569000" />
+      <workItem from="1664763609183" duration="8889000" />
+      <workItem from="1664773104254" duration="3049000" />
+      <workItem from="1664777307816" duration="298000" />
+      <workItem from="1664778039337" duration="1784000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -435,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664759936394</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Modificaciones en los tests">
+      <created>1664772563635</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1664772563635</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,7 +488,8 @@
     <MESSAGE value="Docker compose" />
     <MESSAGE value="fix docker file" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="Modificaciones en los tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificaciones en los tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -507,7 +522,7 @@
     <SUITE FILE_PATH="coverage/ProyectoMingeso$MueblesStgoApplicationTests.ic" NAME="MueblesStgoApplicationTests Coverage Results" MODIFIED="1664673758893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>proyecto.mingeso.muebles_stgo.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/ProyectoMingeso$proyecto_mingeso_muebles_stgo_in_ProyectoMingeso.ic" NAME="proyecto.mingeso.muebles_stgo in ProyectoMingeso Coverage Results" MODIFIED="1664772190565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/ProyectoMingeso$proyecto_mingeso_muebles_stgo_in_ProyectoMingeso.ic" NAME="proyecto.mingeso.muebles_stgo in ProyectoMingeso Coverage Results" MODIFIED="1664779483709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>proyecto.mingeso.muebles_stgo.*</FILTER>
     </SUITE>
   </component>
