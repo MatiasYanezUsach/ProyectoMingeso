@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="avances y fixes 3">
+    <list default="true" id="768bfb96-2951-4c29-b9a9-ee212d19ea11" name="Changes" comment="cambio de puerto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +96,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.proyecto.mingeso.muebles_stgo in ProyectoMingeso">
+  <component name="RunManager" selected="Spring Boot.MueblesStgoApplication (1)">
     <configuration name="RelojServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProyectoMingeso" />
       <extension name="coverage">
@@ -281,7 +280,8 @@
       <workItem from="1664803623658" duration="276000" />
       <workItem from="1664805108883" duration="480000" />
       <workItem from="1664808989960" duration="6422000" />
-      <workItem from="1664834790305" duration="35000" />
+      <workItem from="1664834790305" duration="130000" />
+      <workItem from="1664857397749" duration="386000" />
     </task>
     <task id="LOCAL-00001" summary="CRUD empleado finalizado sin comprobacion de errores">
       <created>1663298292608</created>
@@ -500,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664815959922</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="cambio de puerto">
+      <created>1664834882027</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1664834882028</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +526,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Implementacion vista Login" />
     <MESSAGE value="Implementacion vista SubirJustificativo" />
     <MESSAGE value="modificaciones vistas" />
     <MESSAGE value="avance vista planilla de sueldos" />
@@ -544,7 +550,8 @@
     <MESSAGE value="avances y fixes" />
     <MESSAGE value="avances y fixes 2" />
     <MESSAGE value="avances y fixes 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="avances y fixes 3" />
+    <MESSAGE value="cambio de puerto" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambio de puerto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
