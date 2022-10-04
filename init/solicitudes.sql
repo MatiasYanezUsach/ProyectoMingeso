@@ -1,4 +1,3 @@
-insert into solicitudes (rut_empleado, fecha_cubridora) values ('20.580.291-6','2022-10-24');
 insert into solicitudes (rut_empleado, fecha_cubridora) values ('20.580.291-6','2022-10-25');
 insert into solicitudes (rut_empleado, fecha_cubridora) values ('20.580.291-6','2022-10-26');
 insert into solicitudes (rut_empleado, fecha_cubridora) values ('13.209.219-8','2022-10-27');
